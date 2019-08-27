@@ -9,6 +9,7 @@
     <link href="css/components/dotnav.css" rel="stylesheet" type="text/css">
     <link href="css/components/slidenav.css" rel="stylesheet" type="text/css">
     <link href="css/components/search.min.css" rel="stylesheet" type="text/css">
+    <link href="css/header.css" rel="stylesheet" type="text/css">
     <link href="css/uikit.css" rel="stylesheet" type="text/css">
     <script src="js/uikit.js" type="text/javascript"></script>
     <script src="./js/vue.js"></script>
@@ -19,8 +20,9 @@
     <script src="js/components/search.min.js"></script>
     <script src="./js/jquery-1.11.3.min.js"></script>
     <script src="./js/index.js"></script>
+
 </head>
-<body >
+<body>
 <div id="top">
     <div class="top_main">
         <ul class="uk-breadcrumb" style="float: right;margin-right: 300px;">
@@ -31,6 +33,50 @@
         </ul>
     </div>
 </div>
+<header>
+    <div class="logo" style="float: left">
+        <h1><a href="#"><img src="./images/logo.png" alt="这里改网站名字"></a></h1>
+    </div>
+    <div class="nav" style="float: left">
+        <div class="nav_item">
+            <a href="#">
+                <p>首页</p>
+                <p>Home</p>
+            </a>
+        </div>
+        <div class="nav_item">
+            <a href="#">
+                <p>电影</p>
+                <p>Movie</p>
+            </a>
+        </div>
+        <div class="nav_item">
+            <a href="#">
+                <p>影院</p>
+                <p>Cinema</p>
+            </a>
+        </div>
+        <div class="nav_item">
+            <a href="#">
+                <p>热点</p>
+                <p>Hoot</p>
+            </a>
+        </div>
+        <div class="nav_item">
+            <a href="#">
+                <p>交流圈</p>
+                <p>BBS</p>
+            </a>
+        </div>
+    </div>
+
+    <div class="search">
+        <form class="uk-search" data-uk-search>
+            <input class="uk-search" type="search" placeholder="search...">
+            <button class="uk-button uk-button-primary" type="button">搜索</button>
+        </form>
+    </div>
+</header>
 
 </body>
 </html>

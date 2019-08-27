@@ -1,0 +1,12 @@
+
+.movie-sbj{width:100%;height: auto;}
+.movie-header{width: 100%;height:70px;background-color: #B2DFF2;margin-bottom: 30px;}
+.movie-search{width:1000px;height: 140px;margin: 0 auto;border: 2px #E5E5E5 dashed;}
+.movie-search-unit{width:900px;height:50px;margin-top: 15px;margin-left: 10px;}
+.before{width: 50px;height: 50px;float: left;margin-top: 3px;}
+.after{width:800px;height: 50px;float: left;font-weight: 800;}
+.movie-show{width:1200px;height:500px;margin: 0 auto;text-align:center;}
+.movie-show-unit{float: left;width: 160px;height: 250px;margin:15px;}
+.movie-show-unit img{height: 190px;width: 160px;}
+.movie-show-unit .img{height: 190px;width: 160px;}
+.movie-show-unit .text{font-size: 17px;margin-top: 10px;}

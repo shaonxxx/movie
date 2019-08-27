@@ -1,0 +1,165 @@
+/*header部分*/
+header{
+    width:1025px;
+    height:55px;
+    padding:20px 0px;
+    padding-left:15px;
+    margin:0 auto;
+}
+.logo{
+    width:210px;
+    height:50px;
+    float:left;
+}
+.search{
+    width:327px;
+    height:50px;
+    margin-top:5px;
+    float:right;
+}
+input[type=search]{
+    width:241px;
+    height:34px;
+    padding:6px 12px;
+    border:1px solid #ccc;
+    margin-top:-1px;
+}
+input[type=submit]{
+    width:72px;
+    height:34px;
+    border:1px solid #2E6DA4;
+    padding:6px 12px;
+    margin-left:-5px;
+    background:#337AB7;
+    color:#fff;
+}
+input[type=submit]:hover{
+    background:#286090;
+}
+.tj{
+    margin-top:5px;
+    font-size:12px;
+}
+.tj a{
+    margin-right:5px;
+}
+.tj a:first-child{
+    margin-left:20px;
+}
+.tj a:hover{
+    text-decoration:underline;
+}
+
+/*导航开始*/
+nav{
+    width:100%;
+    height:40px;
+    margin-bottom:20px;
+    background:;
+}
+.nav{
+    width:400px;
+    height:40px;
+    padding:0px 15px;
+    margin:0 auto;
+    background:;
+    overflow:hidden;
+
+}
+/*翻转导航开始*/
+.nav:after{
+    content:'';
+    display:block;
+    overflow:hidden;
+    clear:both;
+}
+.nav_item{
+    width:100px;
+    height:40px;
+    float:left;
+    /*3d元素距离视频的距离  定义后子元素会获取一个3d透视效果而不是元素的本身*/
+    perspective:4000px;
+    -webkit-perspective:4000px;
+    -moz-perspective:4000px;
+    -0-perspective:4000px;
+    -ms-perspective:4000px;
+}
+.nav_item a{
+    margin-right:5px;
+    height:40px;
+    display:block;
+    transition:all 500ms ease 0s;
+    -webkit-transform-style:preserve-3d;
+    -moz-transform-style:preserve-3d;
+    -0-transform-style:preserve-3d;
+    -ms-transform-style:preserve-3d;
+    /*.nav_item的子元素可以呈3d效果*/
+    transform-style:preserve-3d;
+}
+.nav_item a p{
+    height:40px;
+    line-height:40px;
+    margin:0;
+    border-radius:5px;
+    font-size:14px;
+    font-size:"黑体";
+    text-align:center;
+    transition:all 500ms ease 0s;
+}
+.nav_item a p:first-child{
+    border-radius:5px;
+    color:#fff;
+    background:#078EE4;
+    /*沿z轴移动50橡素   20px高度除以2*/
+    transform:translateZ(20px);
+    -webkit-transform:translateZ(20px);
+    -moz-transform:translateZ(20px);
+    -0-transform:translateZ(20px);
+    -ms-transform:translateZ(20px);
+}
+.nav_item a p:last-child{
+    border-radius:5px;
+    color:#fff;
+    background:#30C8C6;
+    /*沿z轴移动50橡素  沿X轴旋转-90度  20px高度除以2*/
+    transform:translateZ(20px) rotateX(-90deg);
+    -webkit-transform:translateZ(20px) rotateX(-90deg);
+    -moz-transform:translateZ(20px) rotateX(-90deg);
+    -0-transform:translateZ(20px) rotateX(-90deg);
+    -ms-transform:translateZ(20px) rotateX(-90deg);
+    /*设置上边距为-20px  20px高度除以2*/
+    margin-top:-20px;
+}
+.nav_item a:hover{
+    margin-top:0px;
+    transform:rotateX(90deg);
+    -webkit-transform:rotateX(90deg);
+    -moz-transform:rotateX(90deg);
+    -0-transform:rotateX(90deg);
+    -ms-transform:rotateX(90deg);
+}
+.nav_item a:hover p:last-child{
+    margin-top:0px;
+    transform:translateZ(0) rotateX(-90deg);
+    -webkit-transform:translateZ(0) rotateX(-90deg);
+    -moz-transform:translateZ(0) rotateX(-90deg);
+    -0-transform:translateZ(0) rotateX(-90deg);
+    -ms-transform:translateZ(0) rotateX(-90deg);
+}
+.nav li{
+    width:100px;
+    height:40px;
+    background:#ff7434;
+    float:right;
+    margin-right:5px;
+    border-radius:5px;
+    line-height:40px;
+    text-align:center;
+    font-size:14px;
+}
+.nav li a{
+    color:#fff;
+}
+.nav li:hover a{
+    color:red;
+}
