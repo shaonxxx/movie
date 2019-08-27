@@ -1,0 +1,930 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="69454bb0-d6d7-42a5-b3a1-fa7aed4aa3ff" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/movie.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/accordion.almost-flat.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/accordion.almost-flat.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/accordion.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/accordion.gradient.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/accordion.gradient.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/accordion.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/autocomplete.almost-flat.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/autocomplete.almost-flat.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/autocomplete.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/autocomplete.gradient.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/autocomplete.gradient.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/autocomplete.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/datepicker.almost-flat.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/datepicker.almost-flat.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/datepicker.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/datepicker.gradient.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/datepicker.gradient.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/datepicker.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/dotnav.almost-flat.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/dotnav.almost-flat.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/dotnav.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/dotnav.gradient.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/dotnav.gradient.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/dotnav.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/form-advanced.almost-flat.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/form-advanced.almost-flat.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/form-advanced.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/form-advanced.gradient.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/form-advanced.gradient.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/form-advanced.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/form-file.almost-flat.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/form-file.almost-flat.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/form-file.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/form-file.gradient.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/form-file.gradient.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/form-file.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/form-password.almost-flat.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/form-password.almost-flat.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/form-password.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/form-password.gradient.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/form-password.gradient.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/form-password.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/form-select.almost-flat.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/form-select.almost-flat.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/form-select.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/form-select.gradient.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/form-select.gradient.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/form-select.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/htmleditor.almost-flat.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/htmleditor.almost-flat.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/htmleditor.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/htmleditor.gradient.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/htmleditor.gradient.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/htmleditor.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/nestable.almost-flat.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/nestable.almost-flat.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/nestable.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/nestable.gradient.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/nestable.gradient.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/nestable.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/notify.almost-flat.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/notify.almost-flat.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/notify.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/notify.gradient.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/notify.gradient.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/notify.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/placeholder.almost-flat.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/placeholder.almost-flat.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/placeholder.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/placeholder.gradient.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/placeholder.gradient.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/placeholder.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/progress.almost-flat.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/progress.almost-flat.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/progress.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/progress.gradient.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/progress.gradient.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/progress.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/search.almost-flat.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/search.almost-flat.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/search.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/search.gradient.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/search.gradient.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/search.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/slidenav.almost-flat.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/slidenav.almost-flat.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/slidenav.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/slidenav.gradient.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/slidenav.gradient.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/slidenav.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/slider.almost-flat.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/slider.almost-flat.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/slider.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/slider.gradient.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/slider.gradient.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/slider.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/slideshow.almost-flat.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/slideshow.almost-flat.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/slideshow.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/slideshow.gradient.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/slideshow.gradient.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/slideshow.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/sortable.almost-flat.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/sortable.almost-flat.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/sortable.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/sortable.gradient.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/sortable.gradient.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/sortable.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/sticky.almost-flat.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/sticky.almost-flat.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/sticky.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/sticky.gradient.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/sticky.gradient.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/sticky.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/tooltip.almost-flat.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/tooltip.almost-flat.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/tooltip.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/tooltip.gradient.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/tooltip.gradient.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/tooltip.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/upload.almost-flat.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/upload.almost-flat.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/upload.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/upload.gradient.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/upload.gradient.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/components/upload.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/uikit.almost-flat.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/uikit.almost-flat.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/uikit.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/uikit.gradient.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/uikit.gradient.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/css/uikit.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/accordion.almost-flat.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/accordion.almost-flat.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/accordion.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/accordion.gradient.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/accordion.gradient.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/accordion.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/autocomplete.almost-flat.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/autocomplete.almost-flat.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/autocomplete.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/autocomplete.gradient.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/autocomplete.gradient.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/autocomplete.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/datepicker.almost-flat.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/datepicker.almost-flat.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/datepicker.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/datepicker.gradient.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/datepicker.gradient.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/datepicker.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/dotnav.almost-flat.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/dotnav.almost-flat.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/dotnav.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/dotnav.gradient.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/dotnav.gradient.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/dotnav.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/form-advanced.almost-flat.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/form-advanced.almost-flat.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/form-advanced.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/form-advanced.gradient.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/form-advanced.gradient.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/form-advanced.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/form-file.almost-flat.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/form-file.almost-flat.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/form-file.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/form-file.gradient.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/form-file.gradient.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/form-file.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/form-password.almost-flat.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/form-password.almost-flat.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/form-password.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/form-password.gradient.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/form-password.gradient.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/form-password.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/form-select.almost-flat.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/form-select.almost-flat.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/form-select.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/form-select.gradient.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/form-select.gradient.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/form-select.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/htmleditor.almost-flat.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/htmleditor.almost-flat.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/htmleditor.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/htmleditor.gradient.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/htmleditor.gradient.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/htmleditor.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/nestable.almost-flat.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/nestable.almost-flat.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/nestable.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/nestable.gradient.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/nestable.gradient.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/nestable.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/notify.almost-flat.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/notify.almost-flat.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/notify.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/notify.gradient.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/notify.gradient.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/notify.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/placeholder.almost-flat.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/placeholder.almost-flat.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/placeholder.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/placeholder.gradient.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/placeholder.gradient.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/placeholder.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/progress.almost-flat.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/progress.almost-flat.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/progress.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/progress.gradient.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/progress.gradient.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/progress.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/search.almost-flat.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/search.almost-flat.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/search.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/search.gradient.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/search.gradient.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/search.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/slidenav.almost-flat.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/slidenav.almost-flat.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/slidenav.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/slidenav.gradient.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/slidenav.gradient.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/slidenav.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/slider.almost-flat.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/slider.almost-flat.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/slider.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/slider.gradient.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/slider.gradient.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/slider.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/slideshow.almost-flat.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/slideshow.almost-flat.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/slideshow.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/slideshow.gradient.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/slideshow.gradient.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/slideshow.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/sortable.almost-flat.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/sortable.almost-flat.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/sortable.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/sortable.gradient.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/sortable.gradient.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/sortable.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/sticky.almost-flat.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/sticky.almost-flat.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/sticky.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/sticky.gradient.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/sticky.gradient.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/sticky.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/tooltip.almost-flat.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/tooltip.almost-flat.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/tooltip.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/tooltip.gradient.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/tooltip.gradient.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/tooltip.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/upload.almost-flat.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/upload.almost-flat.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/upload.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/upload.gradient.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/upload.gradient.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/components/upload.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/uikit.almost-flat.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/uikit.almost-flat.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/uikit.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/uikit.gradient.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/uikit.gradient.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/css/uikit.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/img/pagekit-logo-contrast.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/components/accordion.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/components/accordion.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/components/autocomplete.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/components/autocomplete.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/components/datepicker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/components/datepicker.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/components/form-password.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/components/form-password.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/components/form-select.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/components/form-select.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/components/grid-parallax.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/components/grid-parallax.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/components/grid.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/components/grid.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/components/htmleditor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/components/htmleditor.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/components/lightbox.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/components/lightbox.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/components/nestable.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/components/nestable.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/components/notify.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/components/notify.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/components/pagination.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/components/pagination.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/components/parallax.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/components/parallax.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/components/search.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/components/search.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/components/slider.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/components/slider.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/components/slideset.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/components/slideset.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/components/slideshow-fx.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/components/slideshow-fx.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/components/slideshow.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/components/slideshow.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/components/sortable.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/components/sortable.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/components/sticky.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/components/sticky.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/components/timepicker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/components/timepicker.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/components/tooltip.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/components/tooltip.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/components/upload.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/components/upload.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/core/alert.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/core/alert.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/core/button.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/core/button.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/core/core.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/core/core.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/core/cover.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/core/cover.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/core/dropdown.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/core/dropdown.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/core/grid.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/core/grid.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/core/modal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/core/modal.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/core/nav.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/core/nav.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/core/offcanvas.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/core/offcanvas.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/core/scrollspy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/core/scrollspy.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/core/smooth-scroll.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/core/smooth-scroll.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/core/switcher.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/core/switcher.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/core/tab.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/core/tab.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/core/toggle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/core/toggle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/core/touch.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/core/touch.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/core/utility.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/core/utility.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/uikit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dist/js/uikit.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/about.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/accordion.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/alert.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/animation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/article.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/autocomplete.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/badge.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/base.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/block.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/breadcrumb.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/button.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/close.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/column.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/comment.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/components.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/contrast.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/core.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/cover.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/css/docs.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/css/uikit.docs.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/customizer.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/datepicker.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/description-list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/documentation_create-a-style.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/documentation_create-a-theme.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/documentation_custom-prefix.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/documentation_customizer-json.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/documentation_get-started.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/documentation_how-to-customize.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/documentation_javascript.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/documentation_layouts.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/documentation_less-sass.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/documentation_project-structure.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/dotnav.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/dropdown.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/flex.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/form-advanced.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/form-file.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/form-password.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/form-select.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/form.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/grid-js.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/grid-parallax.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/grid.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/htmleditor.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/icon.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/images/apple-touch-icon.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/images/bg_teaser.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/images/favicon.ico" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/images/icon_components.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/images/icon_less.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/images/icon_responsive.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/images/icon_themes.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/images/layouts_blog.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/images/layouts_contact.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/images/layouts_documentation.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/images/layouts_frontpage.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/images/layouts_login.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/images/layouts_portfolio.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/images/logo_uikit.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/images/logo_uikit_large.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/images/placeholder_120x255.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/images/placeholder_200x100.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/images/placeholder_200x150_1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/images/placeholder_200x150_2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/images/placeholder_200x150_3.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/images/placeholder_200x150_4.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/images/placeholder_200x200.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/images/placeholder_300x455.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/images/placeholder_400x200.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/images/placeholder_400x250.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/images/placeholder_480x260.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/images/placeholder_600x400.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/images/placeholder_600x400_2.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/images/placeholder_800x280.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/images/placeholder_800x400_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/images/placeholder_800x400_2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/images/placeholder_800x400_3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/images/placeholder_800x600_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/images/placeholder_800x600_2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/images/placeholder_800x600_3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/images/placeholder_800x600_4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/images/placeholder_avatar.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/js/customizer.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/js/docs.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/js/uikit.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/layouts_blog.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/layouts_contact.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/layouts_documentation.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/layouts_frontpage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/layouts_login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/layouts_portfolio.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/layouts_post.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/less/uikit.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/less/variables.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/lightbox.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/modal.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/nav.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/navbar.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/nestable.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/notify.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/offcanvas.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/overlay.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/pagination-js.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/pagination.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/panel.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/parallax.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/placeholder.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/print.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/progress.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/scrollspy.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/search.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/slidenav.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/slider.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/slideset.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/slideshow.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/smooth-scroll.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/sortable.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/sticky.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/subnav.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/switcher.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/tab.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/table.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/text.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/thumbnail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/thumbnav.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/timepicker.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/toggle.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/tooltip.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/tutorials.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/upload.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/utility.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fonts/FontAwesome.otf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fonts/fontawesome-webfont.ttf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fonts/fontawesome-webfont.woff" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fonts/fontawesome-webfont.woff2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/header.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/1st-big-item.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/1st-item.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/1st-section.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/1st-tab.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/2nd-big-item.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/2nd-item.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/2nd-section.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/2nd-tab.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/3rd-big-item.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/3rd-item.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/3rd-section.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/3rd-tab.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/4th-big-item.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/4th-item.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/4th-section.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/4th-tab.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/5th-big-item.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/5th-item.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/5th-section.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/6th-big-item.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/6th-item.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/TB1OqhKbrH1gK0jSZFwXXc7aXXa_.jpg_300x300.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/TB1Qf3_FVXXXXacXFXXnZ6pJVXX-990-88.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/back.jfif" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/sudu1.jpg@106w_145h_1e_1c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/xinxin.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/xinxin.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/components/accordion.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/components/accordion.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/components/autocomplete.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/components/autocomplete.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/components/datepicker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/components/datepicker.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/components/form-password.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/components/form-password.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/components/form-select.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/components/form-select.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/components/grid-parallax.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/components/grid-parallax.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/components/grid.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/components/grid.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/components/htmleditor.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/components/htmleditor.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/components/lightbox.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/components/lightbox.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/components/nestable.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/components/nestable.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/components/notify.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/components/notify.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/components/pagination.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/components/pagination.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/components/parallax.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/components/parallax.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/components/search.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/components/search.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/components/slider.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/components/slider.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/components/slideset.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/components/slideset.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/components/slideshow-fx.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/components/slideshow-fx.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/components/slideshow.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/components/slideshow.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/components/sortable.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/components/sortable.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/components/sticky.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/components/sticky.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/components/timepicker.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/components/timepicker.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/components/tooltip.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/components/tooltip.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/components/upload.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/components/upload.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/core/alert.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/core/alert.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/core/button.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/core/button.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/core/core.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/core/core.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/core/cover.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/core/cover.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/core/dropdown.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/core/dropdown.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/core/grid.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/core/grid.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/core/modal.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/core/modal.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/core/nav.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/core/nav.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/core/offcanvas.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/core/offcanvas.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/core/scrollspy.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/core/scrollspy.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/core/smooth-scroll.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/core/smooth-scroll.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/core/switcher.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/core/switcher.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/core/tab.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/core/tab.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/core/toggle.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/core/toggle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/core/touch.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/core/touch.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/core/utility.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/core/utility.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/jquery-2.1.4.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/uikit.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/uikit.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/vue.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/video/neza1.flv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/dilates.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/dilates.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/dilates.html" beforeDir="false" afterPath="$PROJECT_DIR$/dilates.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DefaultGradleProjectSettings">
+    <option name="testRunner" value="GRADLE" />
+    <option name="delegatedBuild" value="true" />
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/index.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="5310">
+              <caret line="177" column="13" selection-start-line="177" selection-start-column="13" selection-end-line="177" selection-end-column="13" />
+              <folding>
+                <element signature="n#style#0;n#embed#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#1;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/header.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="720">
+              <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
+              <folding>
+                <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/login.html">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/dilates.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="14">
+              <caret line="35" column="64" lean-forward="true" selection-start-line="35" selection-start-column="64" selection-end-line="35" selection-end-column="64" />
+              <folding>
+                <element signature="n#style#0;n#embed#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>最近</find>
+    </findStrings>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/header.html" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/css/dilates.css" />
+        <option value="$PROJECT_DIR$/dilates.html" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/movie.iml" />
+        <option value="$PROJECT_DIR$/.idea/misc.xml" />
+        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
+        <option value="$PROJECT_DIR$/.idea/modules.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="914" />
+    <option name="y" value="17" />
+    <option name="width" value="974" />
+    <option name="height" value="1047" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="movie" type="b2602c69:ProjectViewProjectNode" />
+              <item name="movie" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="movie" type="b2602c69:ProjectViewProjectNode" />
+              <item name="movie" type="462c0819:PsiDirectoryNode" />
+              <item name="css" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="movie" type="b2602c69:ProjectViewProjectNode" />
+              <item name="movie" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="movie" type="b2602c69:ProjectViewProjectNode" />
+              <item name="movie" type="462c0819:PsiDirectoryNode" />
+              <item name="video" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/video" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\xly\Desktop\ziliao\第四阶段\模板\movie\video" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="69454bb0-d6d7-42a5-b3a1-fa7aed4aa3ff" name="Default Changelist" comment="" />
+      <created>1566812205856</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1566812205856</updated>
+      <workItem from="1566812207494" duration="7676000" />
+      <workItem from="1566872892183" duration="443000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="8119000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.116204694" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="JRebel" order="2" side_tool="true" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Designer" order="7" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="JRebel Console" order="12" side_tool="true" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="JRebel Setup Guide" order="5" weight="0.32995737" />
+      <window_info anchor="right" id="Capture Analysis" order="6" />
+      <window_info anchor="right" id="Database" order="7" />
+      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Theme Preview" order="9" />
+    </layout>
+    <layout-to-restore>
+      <window_info id="Designer" order="0" />
+      <window_info id="JRebel" order="1" side_tool="true" />
+      <window_info id="Image Layers" order="2" />
+      <window_info id="Capture Tool" order="3" />
+      <window_info id="UI Designer" order="4" />
+      <window_info id="Favorites" order="5" side_tool="true" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.11513859" />
+      <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Terminal" order="0" />
+      <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" order="2" />
+      <window_info anchor="bottom" id="Version Control" order="3" />
+      <window_info anchor="bottom" id="Docker" order="4" show_stripe_button="false" />
+      <window_info anchor="bottom" id="JRebel Console" order="5" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="6" />
+      <window_info anchor="bottom" id="Find" order="7" />
+      <window_info anchor="bottom" id="Run" order="8" />
+      <window_info anchor="bottom" id="Debug" order="9" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="12" />
+      <window_info anchor="right" id="Maven" order="0" />
+      <window_info anchor="right" id="Palette" order="1" />
+      <window_info anchor="right" id="JRebel Setup Guide" order="2" weight="0.32995737" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
+      <window_info anchor="right" id="Palette&#9;" order="5" />
+      <window_info anchor="right" id="Theme Preview" order="6" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="7" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="8" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="9" weight="0.25" />
+    </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/js/jquery-1.11.3.min.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/jquery-2.1.4.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/dilates.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2068">
+          <caret line="231" column="16" lean-forward="true" selection-start-line="231" selection-start-column="16" selection-end-line="231" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5310">
+          <caret line="177" column="13" selection-start-line="177" selection-start-column="13" selection-end-line="177" selection-end-column="13" />
+          <folding>
+            <element signature="n#style#0;n#embed#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#1;n#header#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/header.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="720">
+          <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
+          <folding>
+            <element signature="n#style#0;n#ul#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/login.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/dilates.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="14">
+          <caret line="35" column="64" lean-forward="true" selection-start-line="35" selection-start-column="64" selection-end-line="35" selection-end-column="64" />
+          <folding>
+            <element signature="n#style#0;n#embed#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+  </component>
+</project>

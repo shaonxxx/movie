@@ -5,43 +5,29 @@
 	<title>迅影网</title>
 	<meta name="keywords" content="">
 	<meta name="description" content="">
-	<script src="./js/jquery-1.11.3.min.js"></script>
-	<script src="./js/index.js"></script>
 	<link rel="stylesheet" href="./css/index.css">
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<link href="css/components/slideshow.css" rel="stylesheet" type="text/css">
+	<link href="css/components/dotnav.css" rel="stylesheet" type="text/css">
+	<link href="css/components/slidenav.css" rel="stylesheet" type="text/css">
+	<link href="css/components/search.min.css" rel="stylesheet" type="text/css">
+	<link href="css/uikit.css" rel="stylesheet" type="text/css">
+	<script src="js/jquery-2.1.4.js" type="text/javascript"></script>
+	<script src="js/uikit.js" type="text/javascript"></script>
+	<script src="js/components/grid.js" type="text/javascript"></script>
+	<script src="js/components/slideshow.js" type="text/javascript"></script>
+	<script src="js/components/slideshow-fx.js" type="text/javascript"></script>
+	<script src="js/components/search.min.js"></script>
+	<script src="js/index.js"></script>
+
 </head>
 <body>
-	<script type="text/javascript" color="255,0,0" opacity='0.7' zIndex="-2" count="200" src="./js/canvas-nest.js"></script>
-	<div id="top">
-		<div class="top_main">
-			<div class="top_main_left">
-				<p>欢迎来到迅影网，一起分享电影给我们带来的快乐。</p>
-			</div>
-			<div class="top_main_right">
-				<a class="top_main_right_1" href="">保存到桌面</a>
-				<a class="top_main_right_2" href="">Ctrl+D 加入收藏夹</a>
-			</div>
-		</div>
-	</div>
+	<embed style="width: 100% ;height: 25px;" type="text/html" src="header.html" />
 	<header>
-		<div class="logo">
+		<div class="logo" style="float: left">
 			<h1><a href="#"><img src="./images/logo.png" alt="这里改网站名字"></a></h1>
 		</div>
-		<div class="search">
-			<form action="" method="post">
-				<input type="search" name="search" placeholder="请输入电影名字">
-				<input type="submit" name="anniu" value="搜索">
-			</form>
-			<div class="tj">
-				<a href="#">星际迷航3</a>
-				<a href="#">谍影重重5</a>
-				<a href="#">使徒行者</a>
-				<a href="#">盗墓笔记</a>
-				<a href="#">喊·山</a>
-			</div>
-		</div>
-	</header>
-	<nav>
-		<div class="nav">
+		<div class="nav" style="float: left">
 			<div class="nav_item">
 				<a href="#">
 					<p>首页</p>
@@ -56,14 +42,14 @@
 			</div>
 			<div class="nav_item">
 				<a href="#">
-					<p>电视剧</p>
-					<p>Teleplay</p>
+					<p>影院</p>
+					<p>Cinema</p>
 				</a>
 			</div>
 			<div class="nav_item">
 				<a href="#">
-					<p>动漫</p>
-					<p>Cartoon</p>
+					<p>热点</p>
+					<p>Hoot</p>
 				</a>
 			</div>
 			<div class="nav_item">
@@ -72,49 +58,50 @@
 					<p>BBS</p>
 				</a>
 			</div>
-			<li><a href="#">注册</a></li>
-			<li><a href="#">登录</a></li>
 		</div>
-	</nav>
-	<div class="gg">公告：如果你喜欢迅影网，希望你能把迅影网推广给更多的朋友，多谢！</div>
-	<div class="out l">
-			<div class="hot">
-				<img src="./images/ribbon.png" alt="HoT">
-			</div>
-	        <ul class="img ">
-	            <li>
-	                <a href="# ">
-	                    <img src="./images/1.jpg " alt=" ">
-	                </a>
-	            </li>
-	            <li>
-	                <a href="# ">
-	                    <img src="./images/2.jpg " alt=" ">
-	                </a>
-	            </li>
-	            <li>
-	                <a href="# ">
-	                    <img src="./images/3.jpg " alt=" ">
-	                </a>
-	            </li>
-	            <li>
-	                <a href="# ">
-	                    <img src="./images/4.jpg " alt=" ">
-	                </a>
-	            </li>
-	            <li>
-	                <a href="# ">
-	                    <img src="./images/5.jpg " alt=" ">
-	                </a>
-	            </li>
-	        </ul>
-	        <ul class="num ">
-	        </ul>
-	       <div class="left btn "><</div>
-	       <div class="right btn right-btn">></div>
-	</div>
-	<div class="box-line">
-		<span>推荐资源</span>
+
+		<div class="search">
+			<form class="uk-search" data-uk-search>
+    			<input class="uk-search" type="search" placeholder="search...">
+				<button class="uk-button uk-button-primary" type="button" >搜索</button>
+			</form>
+
+			<!--<div class="tj">
+				<a href="#">星际迷航3</a>
+				<a href="#">谍影重重5</a>
+				<a href="#">使徒行者</a>
+				<a href="#">盗墓笔记</a>
+				<a href="#">喊·山</a>
+			</div>-->
+		</div>
+	</header>
+
+	<!--轮播-->
+		<div class="uk-slidenav-position" data-uk-slideshow="{animation: 'swipe'}" >
+			<!--img-->
+			<ul class="uk-slideshow" data-uk-slideshow="{autoplay:true}">
+				<li><img src="images/1st-section.jpg" width="1000" height="250" alt=""></li>
+				<li><img src="images/5th-section.jpg" width="1000" height="250" alt=""></li>
+				<li><img src="images/2nd-section.jpg" width="1000" height="250" alt=""></li>
+				<li><img src="images/2nd-tab.jpg" width="1000" height="250" alt=""></li>
+				<li><img src="images/4th-section.jpg" width="1000" height="250" alt=""></li>
+			</ul>
+			<!--左右切换-->
+			<a href="#" class="uk-slidenav uk-slidenav-contrast uk-slidenav-previous" data-uk-slideshow-item="previous" style="color: rgba(255,255,255,0.4)"></a>
+			<a href="#" class="uk-slidenav uk-slidenav-contrast uk-slidenav-next" data-uk-slideshow-item="next" style="color: rgba(255,255,255,0.4)"></a>
+
+			<!--按钮-->
+			<ul class="uk-dotnav uk-dotnav-contrast uk-position-bottom uk-flex-center">
+				<li data-uk-slideshow-item="0"><a href="#">Item 1</a></li>
+				<li data-uk-slideshow-item="1"><a href="#">Item 2</a></li>
+				<li data-uk-slideshow-item="2"><a href="#">Item 3</a></li>
+				<li data-uk-slideshow-item="3"><a href="#">Item 4</a></li>
+				<li data-uk-slideshow-item="4"><a href="#">Item 5</a></li>
+			</ul>
+		</div>
+	<br>
+<div class="box-line">
+		<span>推荐影片</span>
 	</div>
 	<div class="menu">
 		<div class="menu_item">
@@ -123,7 +110,7 @@
 					<img src="./images/0069qWFHgw1f899r65iarj30d707nwes.jpg" alt="图片">
 					<img src="./images/0069qWFHgw1f7iz0778hbj30d707n757.jpg" alt="图片">
 				</a>
-				<span class="menu_item_img_title">【1080P】<无间道-无间风云再起>第一季12集全</span>
+				<!--<span class="menu_item_img_title">【1080P】&gt;;无间道-无间风云再起>第一季12集全</span>-->
 			</div>
 			<div class="menu_item_img">
 				<a href="#">
@@ -145,18 +132,17 @@
 			</div>
 		</div>
 	</div>
-	<main>
+<main>
 		<div class="main">
 			<div class="main_title">
-				<h3>最新电影</h3>
-				<a href="">更多>></a>
+				<h3>正在热映</h3>
+				<a href="#">更多&gt;&gt;</a>
 			</div>
-			<div class="main_item">
-				<a class="main_item_img" href="">
+			<div class="main_list">
+				<div class="main_item">
 					<img class="main_item_img_tu" src="./images/0069qWFHjw1f5ukwnznnnj30b90go77h.jpg" alt="">
 					<img class="main_item_ico" src="./images/play-icon.png" alt="">
-					<span class="cq">超清</span>
-				</a>
+				
 				<div class="main_item_title">
 					<h1>
 						<a href="#" target="_blank" title="人类清除计划3">人类清除计划3</a>
@@ -304,8 +290,9 @@
 				</div>
 			</div>
 			<div class="cl"></div>
-			<div class="main_add">
+<!--			<div class="main_add">
 				<img src="./images/0069qWFHgw1f5a58ws5v6j30l402iq3x.jpg" alt="">
+			</div>	-->
 			</div>
 		</div>
 		<div class="right">
@@ -437,12 +424,13 @@
 			</div>
 		</div>
 	</main>
-	<div class="main2">
 		<div class="main2_title">
-			<h3>电视剧推荐</h3>
-			<a href="">更多>></a>
+			<h3>&nbsp;&nbsp;即将上映</h3>
+			<a href="#">更多&gt;&gt;</a>
 		</div>
-		<div class="main2_item">
+	<div class="main2">
+		<div class="main2_list">
+			<div class="main2_item">
 			<div class="main2_item_img">
 				<a href="#"><img src="./images/0069qWFHgw1f8hc7xrwgmj30br0goq7e.jpg" alt=""></a>
 				<span class="gq">超清</span>
@@ -533,11 +521,13 @@
 			</div>
 		</div>
 	</div>
-	<div class="main2_add"></div>
+	</div>
+		
+<div class="main2_add"></div>
 	<div class="main3">
 		<div class="main3_title">
-			<h3>电影推荐</h3>
-			<a href="">更多>></a>
+			<h3>热播电影</h3>
+			<a href="">更多&gt;&gt;</a>
 		</div>
 		<div class="main3_item">
 			<div class="main3_item_img">
@@ -721,7 +711,7 @@
 		</div>	
 	</div>
 	<div class="cl"></div>
-	<a class="genduo" href="#">更多精彩电影>></a>
+	<!--<a class="genduo" href="#">更多精彩电影&gt;&gt;</a>-->
 	<footer>
 		<div class="foot">
 			<p>
