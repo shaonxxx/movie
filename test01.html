@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/wangEditor.js"></script>
+    <script src="js/jquery-2.1.4.js"></script>
+</head>
+<body>
+    <a href="test02.html?name=3&age=3&school=qinhua">testtest</a>
+    <div id="editor" style="width: 500px;height: 500px;">
+        123213
+    </div>
+</body>
+<script>
+    $(function () {
+        var E = window.wangEditor;
+        var editor = new E('#editor');
+        editor.create();
+    })
+</script>
+</html>

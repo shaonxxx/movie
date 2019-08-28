@@ -1,212 +1,268 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>详情页</title>
-	<meta name="keywords" content="">
-	<meta name="description" content="">
+    <meta charset="UTF-8">
+    <title>详情页</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
 
-	<link rel="stylesheet" href="./css/dilates.css">
-	<link rel="stylesheet" href="./css/bootstrap.css">
-	<link href="css/uikit.css" rel="stylesheet" type="text/css">
-	<script src="./js/jquery-1.11.3.min.js"></script>
-	<script src="js/uikit.js" type="text/javascript"></script>
-    <script src="./js/bootstrap.min.js"></script>
-	<script src="js/vue.js"></script>
-	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-	<link href="js/bootstrap.min.js" rel="stylesheet">
+    <link rel="stylesheet" href="css/dilates.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link href="css/uikit.css" rel="stylesheet" type="text/css">
+    <script src="js/wangEditor.js"></script>
+    <script src="js/jquery-1.11.3.min.js"></script>
+    <script src="js/uikit.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/vue.js"></script>
+    <script src="js/axios.js"></script>
+    <link href="js/bootstrap.min.js" rel="stylesheet">
 </head>
-<body id="app">
-<embed style="width: 100% ;height: 25px;" type="text/html" src="header.html" />
-	<div class="back">
-		<div class="back-msg">	
-				<div class="back-imgs">
-					<a class="movie-post" href="http://www.saaee.com/movie/201186.html" style="display:block;position:relative;">
-						<img class="img-thumbnail" alt="28岁未成年" src="http://ww2.sinaimg.cn/mw690/006xTuHMgw1fbdk0yamdrj30bw0gogpv.jpg" style="width: 300px;">
-					</a>
-				</div>
-				<div class="back-year">
-					<h1>
-					28岁未成年
-					<span class="year">(2016)</span>
-				</h1>
-				</div>
-				<div class="back-dilates">
-					<span>类型：</span>
-					<a href="#" style="font-size: 14px;">恐怖,</a>
-					<a href="#" style="font-size: 14px;">恐怖,</a>
-					<a href="#" style="font-size: 14px;">恐怖,</a>
-					<a href="#" style="font-size: 14px;">恐怖</a>
-				</div>
-				<div class="back-class">
-					<a href="#">英语</a>
-					&nbsp;
-					<a href="#">国语</a>
-					&nbsp;/134分钟
-				</div>
-				<div class="back-buy">
-					<button class="uk-button-large uk-button-primary" type="button">点击购票</button>
-					<button class="uk-button-small uk-button-danger" type="button">评分</button>
-				</div>
-				<div class="back-mix">
-					<span style="font-weight: 800;">用户评分</span><br>
-					<span style="font-size: 30px;color: yellow">8.6</span>
-					<div>
-						<img src="images/xinxin.png" style="width: 30px;height: 30px;">
-						<img src="images/xinxin.png" style="width: 30px;height: 30px;">
-						<img src="images/xinxin.png" style="width: 30px;height: 30px;">
-						<img src="images/xinxin.png" style="width: 30px;height: 30px;">
-						<img src="images/xinxin.png" style="width: 30px;height: 30px;">
-					</div>
-					
-			</div>
-		</div>
-	</div>
-	<div style="height: 100px;float: left;width: 100%">
-	</div>
-		<div class="dilates-row"><!--class="container"-->
-			<div class="tabs">
-				<ul class="uk-tab" data-uk-tab="{connect:'#foreshow'}">
-					<li class="uk-active"><a href="#">预告片</a></li>
-					<li ><a href="#">介绍</a></li>
-					<li><a href="#">演职员表</a></li>
-				</ul>
-			
-				<ul id="foreshow" class="uk-switcher uk-margin">
-					<li>
-						<!-- 带有视频的幻灯片 -->
-							<ul class="uk-slideshow">
-									<video width="700" height="400" autoplay loop muted controls>
-										<source src="https://blz-videos.nosdn.127.net/1/OverWatch/OVR-S03_E03_McCree_REUNION_zhCN_1080P_mb78.mp4" type="">
-										<!--<iframe width="1000" height="500" src='http://player.youku.com/embed/XNDI4NTkxNDQ3Mg' frameborder="0" allowfullscreen></iframe>-->
-									</video>
-							</ul>	
-					</li>
-					<li>
-						<div  style="margin-top:5px;width:740px;">
-							<div class="col-xs-12 movie-introduce">
-								<h1>影片名</h1>
-								<p>
-									二十八岁的凉夏（倪妮 饰）本以为一定能够和相恋了十年之久的男友茅亮（霍建华 饰）一起携手步入婚礼的殿堂，并且一直为了迎接两人盛大的婚礼而做着各种各样的准备，心中充满了对婚后生活的美好幻想。茅亮的公司正在进行着紧张的第二轮融资，事情进行的并不是非常顺利，凉夏对婚姻的渴望带给了茅亮巨大的压力。
-								</p>
-								<p>
-									某日，两人一起参加了凉夏闺蜜白晓柠（马苏 饰）的婚礼，经受不住婚礼上浪漫热烈的氛围，凉夏向茅亮逼婚了，让凉夏没有想到的是，茅亮竟然提出了分手的要求，巨大的打击之下，凉夏崩溃了。一场意外的发生让凉夏的心智返回到了十七岁的年纪，此时外表成熟内心却极为幼稚的她遇见了名为严岩（王大陆 饰）的男子。
-								</p>
-							</div>
-						</div>
-					</li>
-					<li>
-						待定
-					</li>
-				</ul>
-			</div>
-			<div class="recommend">
-				<div>
-					<h2>精彩推荐</h2>
-				</div>	
-				<div class="tuijian" >
-					<div class="">
-						<a  target="_blank" title="#" href="#">
-							<img alt="何以笙箫默" src="images/sudu1.jpg@106w_145h_1e_1c" width="100%">
-						</a>
-						<a target="_blank" title="#" href="#">
-							<h4>速度与激情<br><i>7.9分</i></h4>
-						</a>
-					</div>
-					<div class="">
-						<a  target="_blank" title="#" href="#">
-							<img alt="何以笙箫默" src="images/sudu1.jpg@106w_145h_1e_1c" width="100%">
-						</a>
-						<a target="_blank" title="#" href="#">
-							<h4>速度与激情<br><i>7.9分</i></h4>
-						</a>
-					</div>
-					<div class="">
-						<a  target="_blank" title="#" href="#">
-							<img alt="何以笙箫默" src="images/sudu1.jpg@106w_145h_1e_1c" width="100%">
-						</a>
-						<a target="_blank" title="#" href="#">
-							<h4>速度与激情<br><i>7.9分</i></h4>
-						</a>
-					</div>
-					<div class="">
-						<a  target="_blank" title="#" href="#">
-							<img alt="何以笙箫默" src="images/sudu1.jpg@106w_145h_1e_1c" width="100%">
-						</a>
-						<a target="_blank" title="#" href="#">
-						<h4>速度与激情<br><i>7.9分</i></h4>
-						</a>
-					</div>
-					<div class="">
-						<a  target="_blank" title="#" href="#">
-							<img alt="何以笙箫默" src="images/sudu1.jpg@106w_145h_1e_1c" width="100%">
-						</a>
-						<a target="_blank" title="#" href="#">
-							<h4>速度与激情<br><i>7.9分</i></h4>
-						</a>
-					</div>
-				</div>
-			</div>
-			<div class="comment">
-				<div class="comment-handle">
-					<div style="float: left"><h2>精彩评论</h2></div>
-					<div style="float: right"><button class="uk-button" type="button">点击评论</button></div>
-				</div>
-				<div class="comment-text">
-					<div class="comment-user">
-						<div class="comment-text-img">
-							<img src="images/1st-big-item.jpg" >
-						</div>
-						<div class="comment-text-bag">
-							<div><h3>名称</h3></div>
-							<div><h6>评分星星</h6></div>
-							<div style="width: 600px;"><p>评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体
-															评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体
-															评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体
-														</p>
-							</div>
-							<hr style="width: 600px;"/>
-						</div>
-					</div>
-					<div>
-						<div class="comment-text-img">
-							<img src="images/1st-big-item.jpg" >
-						</div>
-						<div class="comment-text-bag">
-							<div><h3>名称</h3></div>
-							<div><h6>评分星星</h6></div>
-							<div style="width: 600px;"><p>评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体
-															评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体
-															评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体
-														</p>
-							</div>
-							<hr style="width: 600px;"/>
-						</div>
-					</div>
-				</div>
-			</div>
-				<!--<div class="container-fluid" style="background:#fff;padding-top:15px;">
-					<div class="row" >
-						<div class="col-xs-9 movie-info padding-right-5" style="width:780px;">
-							<div class="row">
-								
-							</div>
+<body>
 
-							<div class="row">
-								
-								
-							</div>
-						</div>
-					<div class="col-xs-3 sidebar" style="padding-left:15px;width:220px;padding-right:5px;">
-						<div class="row">
+<embed style="width: 100% ;height: 25px;" type="text/html" src="header.html"/>
+<div id="app">
+    <div class="back">
+        <div class="back-msg">
+            <div class="back-imgs">
+                <a class="movie-post" href="http://www.saaee.com/movie/201186.html"
+                   style="display:block;position:relative;">
+                    <img class="img-thumbnail" alt="28岁未成年"
+                         src="http://ww2.sinaimg.cn/mw690/006xTuHMgw1fbdk0yamdrj30bw0gogpv.jpg" style="width: 300px;">
+                </a>
+            </div>
+            <div class="back-year">
+                <h1>
+                    {{film.filmName}}
+                    <!--<span class="year">(2016)</span>-->
+                </h1>
+            </div>
+            <div class="back-dilates">
+                <span>类型：</span>
+                <a href="#" style="font-size: 14px;">{{film.categoryString}}</a>
+            </div>
+            <div class="back-class">
+                <a href="#">{{film.language}}</a>
+                &nbsp;
+                &nbsp;/{{film.releseDate}}
+            </div>
+            <div class="back-buy">
+                <button class="uk-button-large uk-button-primary" type="button">点击购票</button>
+                <button class="uk-button-small uk-button-danger" type="button">评分</button>
+            </div>
+            <div class="back-mix">
+                <span style="font-weight: 800;">用户评分</span><br>
+                <span style="font-size: 30px;color: yellow">{{film.grage}}</span>
+                <div>
+                    <img src="images/xinxin.png" style="width: 30px;height: 30px;">
+                    <img src="images/xinxin.png" style="width: 30px;height: 30px;">
+                    <img src="images/xinxin.png" style="width: 30px;height: 30px;">
+                    <img src="images/xinxin.png" style="width: 30px;height: 30px;">
+                    <img src="images/xinxin.png" style="width: 30px;height: 30px;">
+                </div>
 
-						</div>
+            </div>
+        </div>
+    </div>
+    <div style="height: 100px;float: left;width: 100%">
+    </div>
+    <div class="dilates-row"><!--class="container"-->
+        <div class="tabs">
+            <ul class="uk-tab" data-uk-tab="{connect:'#foreshow'}">
+                <li class="uk-active"><a href="#">预告片</a></li>
+                <li><a href="#">介绍</a></li>
+                <li><a href="#">演职员表</a></li>
+            </ul>
 
-					</div>
-				</div>
-			</div>-->
-		
-	</div>
+            <ul id="foreshow" class="uk-switcher uk-margin">
+                <li>
+                    <!-- 带有视频的幻灯片 -->
+                    <ul class="uk-slideshow">
+                        <video width="700" height="400" autoplay loop muted controls>
+                            <source src="https://blz-videos.nosdn.127.net/1/OverWatch/OVR-S03_E03_McCree_REUNION_zhCN_1080P_mb78.mp4"
+                                    type="">
+                            <!--<iframe width="1000" height="500" src='http://player.youku.com/embed/XNDI4NTkxNDQ3Mg' frameborder="0" allowfullscreen></iframe>-->
+                        </video>
+                    </ul>
+                </li>
+                <li>
+                    <div style="margin-top:5px;width:740px;">
+                        <div class="col-xs-12 movie-introduce">
+                            <h1>{{film.filmName}}</h1>
+                            <p>
+                                {{film.info}}
+                            </p>
+
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    {{film.stars}}
+                    <br>
+                    {{film.otherStats}}
+                </li>
+            </ul>
+        </div>
+        <div class="recommend">
+            <div>
+                <h2>精彩推荐</h2>
+            </div>
+            <div class="tuijian">
+                <div class="" v-for="filmrandom in filmRandom">
+                    <a target="_blank" title="#" href="#">
+                        <img alt="" src="images/sudu1.jpg@106w_145h_1e_1c" width="100%">
+                    </a>
+                    <a target="_blank" title="#" href="#">
+                        <h4>{{filmrandom.filmName}}<br><i>{{filmrandom.grage}}分</i></h4>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="comment">
+            <div class="comment-handle">
+                <div style="float: left"><h2>精彩评论</h2></div>
+                <div style="float: right">
+                    <a class="uk-button" href="#modal-blank" data-uk-modal="{target:'#modal-blank',bgclose:false}">点击评论</a>
+                </div>
+            </div>
+            <div class="comment-text">
+                <div class="comment-user">
+                    <div class="comment-text-img">
+                        <img src="images/1st-big-item.jpg">
+                    </div>
+                    <div class="comment-text-bag">
+                        <div><h3>名称</h3></div>
+                        <div><h6>评分星星</h6></div>
+                        <div style="width: 600px;"><p>评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体
+                            评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体
+                            评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体
+                        </p>
+                        </div>
+                        <hr style="width: 600px;"/>
+                    </div>
+                </div>
+                <div>
+                    <div class="comment-text-img">
+                        <img src="images/1st-big-item.jpg">
+                    </div>
+                    <div class="comment-text-bag">
+                        <div><h3>名称</h3></div>
+                        <div><h6>评分星星</h6></div>
+                        <div style="width: 600px;"><p>评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体
+                            评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体
+                            评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体
+                        </p>
+                        </div>
+                        <hr style="width: 600px;"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="modal-blank"  class="uk-modal" style="padding-top: 100px;">
+    <div class="uk-modal-dialog uk-modal-dialog-blank" style="width: 1000px;height: 550px;margin: 0 auto;">
+        <button class="uk-modal-close uk-close" type="button" onclick="closeText()"></button>
+        <div class="uk-grid uk-flex-middle" data-uk-grid-margin>
+            <div>
+               <div style="width: 500px;height: 50px;margin-left: 20px;margin-top: 20px;">
+                   <div style="width: 90px;height: 50px;float: left;margin-top: 10px;margin-right: 20px;"><h2>评&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;分：</h2></div>
+                   <div><img src="images/xingxing2.png" style="width: 50px;">
+                       <img src="images/xingxing2.png" style="width: 50px;">
+                       <img src="images/xingxing2.png" style="width: 50px;">
+                       <img src="images/xingxing2.png" style="width: 50px;">
+                       <img src="images/xingxing2.png" style="width: 50px;">
+                   </div>
+               </div>
+                <div style="width: 500px;height: 50px;margin-left: 20px;margin-top: 20px;"><h2>评论内容：</h2></div>
+            </div>
+            <div id="editor" style="width: 1000px;height: 300px;margin-top: 10px;margin-left: 20px;">
+
+            </div>
+            <div class="uk-modal-footer uk-text-right" style="width: 900px;height: 50px;margin-top: 40px;margin-left: 50px;">
+                <button type="button" class="uk-button">Cancel</button>
+                <button type="button" class="uk-button uk-button-primary">Save</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
 </body>
+<script>
+    var apps = new Vue({
+        el: "#app",
+        data: {
+            film: {},
+            filmRandom: []
+        }
+    })
+
+    //加载富文本编辑器
+    var E = window.wangEditor;
+    var editor = new E('#editor');
+    editor.create();
+
+
+
+
+    // 设置内容
+    //关闭评论窗口后
+    function closeText(){
+        editor.txt.html("");
+    }
+
+
+
+
+    $(function () {
+
+        var param = resJson();
+        param = JSON.parse(param);
+        axios({
+            url: "http://localhost:8081/film",
+            method: "get",
+            params: param
+        }).then(function (res) {
+            this.apps.film = res.data.data;
+        });
+
+        axios({
+            url: "http://localhost:8081/film/getRandom",
+            method: "get",
+            params: {
+                num: 9
+            }
+        }).then(function (res) {
+            this.apps.filmRandom = res.data.data;
+        })
+
+
+
+    });
+
+
+    function resJson(url,) {
+        var url = window.location.search;
+        var oltid = url.substr(url.indexOf("?") + 1);
+        oltid = oltid.split('&');
+        var json = "{";
+        for (var i in oltid) {
+            var param = oltid[i].replace("=", "\":\"");
+            json += "\"" + param + "\","
+        }
+        json = json.substr(0, json.length - 1);
+        json += "}"
+        return json;
+    }
+
+
+    function comments() {
+        UIkit.modal.prompt('Name:', '123', function (val) {
+
+            UIkit.modal.alert('Hello ' + (val || 'Mr noname') + '!');
+        });
+    }
+</script>
 
 </html>

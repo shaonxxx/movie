@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="js/vue.js"></script>
+</head>
+<body>
+
+    <div id="app" >
+        <div v-for="test1 in test">
+            {{test1.name}}
+            <br>
+            {{test1.age}}
+            <br>
+            {{test1.school}}
+        </div>
+    </div>
+
+
+    <script>
+        var url=window.location.search;
+        var json=resJson(url);
+        var apps=new Vue({
+            el:"#app",
+            data:{
+                test:[
+
+                ]
+            }
+        })
+
+
+
+       function resJson( url ) {
+           var oltid = url.substr(url.indexOf("?")+1);
+           oltid=oltid.split('&');
+           var json="";
+           for(var i in oltid){
+               var param=oltid[i].replace("=","\":\"");
+               json+="\""+param+"\","
+           }
+           json = json.substr(0,json.length-1);
+           return json;
+       }
+
+
+    </script>
+
+</body>
+</html>
