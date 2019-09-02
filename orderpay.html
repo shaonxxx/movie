@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>支付</title>
+    <link rel="stylesheet" href="layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="style/admin.css" media="all">
+    <script src="js/jquery-2.1.4.js"></script>
+    <script src="layui/layui.js"></script>
+    <style>
+        .container{
+            border: 0px red solid;
+            margin-top: 50px;
+            margin-bottom: 3em;
+            float: left;
+            width: 1000px;
+            height: 100px;
+            background-color: #FFF3F3;
+        }
+        .order-time{
+            border: 0px red solid;
+            float: left;
+            width: 800px;
+            height: 100px;
+            line-height: 100px;
+            font-family: '微软雅黑';
+            font-size: 20px;
+        }
+        .time-info{
+            border: 0px red solid;
+            width: 196px;
+            height: 100px;
+            float: left;
+            text-align: center;
+        }
+        .time-img{
+            border: 0px blue solid;
+            width: 60px;
+            height: 100px;
+            float: left;
+        }
+        .time-info img{
+            margin-top: 10px;
+            width: 50px;
+            height: 80px;
+        }
+        .time-orderTime{
+            border: 0px green solid;
+            width: 130px;
+            height: 100px;
+            float: left;
+        }
+        .time-orderTime div {
+            margin-top: 20px;
+        }
+        .time-orderTime span {
+            font-family: '微软雅黑';
+            font-size: 25px;
+            color: red;
+        }
+        .order-num{
+            float: left;
+            line-height: 3em;
+        }
+        .description{
+            float: right;
+            line-height: 3em;
+        }
+        .description span {
+            color: red;
+        }
+        .ticket-info div {
+            text-align: center;
+        }
+        .ticket-info th {
+            text-align: center;
+        }
+        .price-info{
+            float: right;
+            margin-right: 200px;
+            margin-top: 10px;
+        }
+        .real-price{
+            color: red;
+            font-family: '微软雅黑';
+            font-size: 30px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .box{
+            border: 0px red solid;
+            width: 1200px;
+            height: 800px;
+            margin-left: 450px;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+
+
+<table class="layui-table" style="margin-top: 100px; width: 1000px;height: 100px;">
+    <thead>
+    <tr style="text-align-last: center;width: 150px">
+        <th style="color: green"><i class="layui-icon layui-icon-ok-circle"></i> 1.选择影片，场次</th>
+        <th style="color: green"><i class="layui-icon layui-icon-ok-circle"></i> 2.选座，填手机号</th>
+        <th style="color: red">3.确认订单，支付</th>
+        <th>4.支付成功，影院取票观影</th>
+    </tr>
+    </thead>
+</table>
+<div class="container">
+    <div class="order-time">
+        请您确认您的订单信息，并请在10分钟内完成付款，如超时系统将自动释放已选座位。
+    </div>
+    <div class="time-info">
+        <div class="time-img"><img src="images/timg.jpg"/></div>
+        <div class="time-orderTime">
+            <div>剩余支付时间:</div>
+            <span id="pay-time"></span>
+        </div>
+
+    </div>
+    <div class="order-num">订单编号:2223333322</div>
+    <div class="description">如遇支付问题,请拨打客服热线:<span>111222333</span></div>
+</div>
+
+<table class="layui-table" style="width: 1000px;height: 100px;">
+   <!-- <colgroup>
+        <col width="300">
+        <col width="150">
+        <col width="150">
+        <col width="100">
+        <col>
+    </colgroup>-->
+    <thead>
+    <tr class="ticket-info">
+        <th>影片</th>
+        <th>时间</th>
+        <th>影院</th>
+        <th>票数/座位</th>
+        <th>金额小计</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr class="ticket-info">
+        <td>
+            <div>哪吒之魔童降世</div>
+        </td>
+        <td>
+            <div>8月27日 (周二) 21:15</div>
+        </td>
+        <td>
+            <div>鑫苑星空影城(巨幕店)</div>
+        </td>
+        <td>
+            <div>3号激光厅</div>
+            <div>1张</div>
+            <div>5排5座</div>
+        </td>
+        <td>
+            <div>
+                <div>￥37.90</div>
+            </div>
+        </td>
+    </tr>
+    </tbody>
+</table>
+<div class="price-info">
+    实付款:<span class="real-price">￥37.90</span><br>
+    <a href="http://www.layui.com" class="layui-btn layui-btn-radius layui-btn-normal">电子钱包支付</a>
+    <button onclick="alipay()" type="button" class="layui-btn layui-btn-radius layui-btn-normal">支付宝支付</button>
+
+</div>
+</div>
+</body>
+<script>
+    var maxtime;
+    if(window.name==''){
+        maxtime = 10*60;
+    }else{
+        maxtime = window.name;
+    }
+    // 倒计时
+    function CountDown(){
+        if(maxtime>=0){
+            minutes = Math.floor(maxtime/60);
+            seconds = Math.floor(maxtime%60);
+            msg = minutes+"分"+seconds+"秒";
+            $("#pay-time").text(msg);
+            --maxtime;
+            window.name = maxtime;
+        }else{
+            clearInterval(timer);
+            // 处理超时未付款的订单refund.html
+            // modifyOrderState();
+            alert("支付超时,该订单已失效,请重新购买");
+            window.location.href = "/index.html";
+        }
+    }
+    timer = setInterval("CountDown()",1000);
+
+    // 处理超时未付款订单
+    function modifyOrderState() {
+        var orderId = 1;
+        $.ajax({
+            url:"/modifyTimeOutOrder",
+            type:"post",
+            data:{
+                orderId:orderId
+            },
+            success:function (data) {
+                alert(data);
+                if (data == "订单状态修改成功"){
+                    alert("订单超时,请重新选座下单");
+                }
+            }
+        });
+    }
+    // 支付
+    function alipay() {
+        var orderId = 3;
+        $.ajax({
+            url:"/pay/alipayMoney",
+            type:"post",
+            data:{
+                orderId:orderId
+            },
+            success:function (result) {
+                if (result.code == 200){
+                    // 添加之前先删除一下，如果单页面，页面不刷新，添加进去的内容会一直保留在页面中，二次调用form表单会出错
+                    var divForm = document.getElementsByTagName('divform')
+                    if (divForm.length) {
+                        document.body.removeChild(divForm[0])
+                    }
+                    var div=document.createElement('divform');
+                    div.innerHTML=result.data; // data就是接口返回的form 表单字符串
+                    document.body.appendChild(div);
+                    document.forms[0].setAttribute('target', '_blank') // 新开窗口跳转
+                    document.forms[0].submit();
+                }else {
+                    alert(result.message);
+                    window.location.href = "/index.html";
+                }
+            }
+        });
+    }
+</script>
+</html>

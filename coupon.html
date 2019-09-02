@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.thymeleaf.org">
+<head>
+	<title>猫眼电影 - 一网打尽好电影</title>
+
+	<meta charset="utf-8">
+	<meta name="description" content="电子钱包优惠券页面">
+
+	<link rel="stylesheet" href="//s3plus.meituan.net/v1/mss_e2821d7f0cfe4ac1bf9202ecf9590e67/cdn-prod/file:5788b470/common.0a548310.css" />
+	<link rel="stylesheet" href="//s3plus.meituan.net/v1/mss_e2821d7f0cfe4ac1bf9202ecf9590e67/cdn-prod/file:5788b470/profile-profile.13d06bf4.css" />
+	<link rel="stylesheet" href="css/layui.css" />
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link href="css/header.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="css/coupon.css" />
+
+	<script src="js/uikit.js" type="text/javascript"></script>
+	<script type="text/javascript" src="js/jquery-2.1.4.js"></script>
+	<script type="text/javascript" src="js/jQuery-2.2.2-min.js"></script>
+
+</head>
+
+<body>
+	<div id="top" style="background-color: #F1F1EF">
+		<div class="top_main">
+			<ul class="uk-breadcrumb" style="float: right;margin-right: 300px;">
+				<li>
+					<a href="">会员中心</a>
+				</li>
+				<li>
+					<a href="login.html">登录</a>
+				</li>
+				<li>
+					<a href="reg.html">注册</a>
+				</li>
+				<li class="uk-active"><span>...</span></li>
+			</ul>
+		</div>
+	</div>
+	<div class="header">
+	</div>
+	<table id="orderList">
+	</table>
+	<div class="header-placeholder"></div>
+	<div class="container" id="app" class="page-profile/profile">
+		<div class="content">
+			<div class="main">
+				<div class="info-content clearfix">
+					<div class="user-profile-nav">
+						<h1>个人中心</h1>
+						<a href="userCenter1.html" class="profile ">基本信息</a>
+						<a href="order.html" class="orders active">我的订单</a>
+						<a href="coupon.html" class="coupon">优惠券</a>
+					</div>
+
+					<div class="orders-container">
+						<div class="profile-title">我的优惠券，当前可用{{count}}张</div>
+						<div class="order-box" id="mycoupon">
+						
+						<div class="sawtoothc" style="width:420px;height:170px;" v-for="(item,index) in coupons">
+							<div class="pt10 bor_r_dashed clearfix pr10 pb8 flex-item pl10 bg-cffb937">
+
+								<h3 class="fs36">金额:{{item.amount}}</h3>
+
+								<div class="fs12 lh18">每次限用1张</div>
+
+								<div class="fs12 lh18">有效期:{{item.activeTime}}</div>
+
+							</div>
+
+							<div class="textc flex-align-self w102 bg-cffb937 lhh90 mr5">当前状态:{{['未使用','已使用','已过期'][item.state]}}</div>
+						
+						</div>
+						
+						</br>
+						
+						<div class="col-md-6" id="page_info">
+
+						</div>
+						<div class="col-md-6" id="page_nave">
+
+						</div>
+					</div>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+	<div class="footer">
+
+	</div>
+	<script type="text/javascript" src="js/axios.min.js"></script>
+	<script type="text/javascript" src="js/vue.js"></script>
+	<script type="text/javascript" src="js/jquery-2.1.4.js"></script>
+	<script type="text/javascript" src="js/jQuery-2.2.2-min.js"></script>
+	<script type="text/javascript">
+		var app = new Vue({
+			el: "#app",
+			data: {
+				coupons: [],
+				curretPage: "1",
+				pageSize: "",
+				count:"",
+			},
+			created: function() {
+				this.pageHandler(1);
+				axios.get("http://localhost:8082/couponCount/1")
+				.then(res=>{
+					console.log(res);
+					this.count=res.data;
+				})
+			},
+			methods: {
+				pageHandler: function(currentPage) {
+					axios.get("http://localhost:8082/couponList/1",{
+								params: {
+										currentPage:1,
+										pageSize:5
+								}
+							}).then(res=>{
+						console.log(res);
+						this.coupons=res.data.list;
+						this.currentPage=res.data.currentPage;
+						this.pageSize=res.data.pageSize;
+					})
+					}
+		}
+		})
+	</script>
+</body>
+
+</html>

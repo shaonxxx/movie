@@ -7,15 +7,74 @@
     <link href="css/movie-list.css" rel="stylesheet" type="text/css">
     <link href="css/uikit.css" rel="stylesheet" type="text/css">
     <link href="css/wangEditor.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="//s3plus.meituan.net/v1/mss_e2821d7f0cfe4ac1bf9202ecf9590e67/cdn-prod/file:5788b470/common.0a548310.css"/>
+    <link rel="stylesheet" href="//s3plus.meituan.net/v1/mss_e2821d7f0cfe4ac1bf9202ecf9590e67/cdn-prod/file:5788b470/query-index.8f264800.css"/>
     <script src="js/wangEditor.js"></script>
     <script src="./js/jquery-1.11.3.min.js"></script>
     <script src="js/uikit.js" type="text/javascript"></script>
     <script src="js/vue.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="js/components/pagination.js"></script>
+    <script>
+        function skip (id) {
+            alert(id)
+            window.location.href="http://localhost/"+id+".html";
+        }
+
+    </script>
 </head>
 <body >
-    <embed style="width: 100% ;height: 128px;" type="text/html" src="header.html" />
+<div >
+    <div id="top">
+        <div class="top_main">
+            <ul class="uk-breadcrumb" style="float: right;margin-right: 300px;">
+                <li><a href="">会员中心</a></li>
+                <li><a href="login.html">登录</a></li>
+                <li><a href="reg.html">注册</a></li>
+                <li class="uk-active"><span>...</span></li>
+            </ul>
+        </div>
+    </div>
+    <header>
+        <div class="logo" style="float: left">
+            <h1><a href="#"><img src="./images/logo.png" alt="#"></a></h1>
+        </div>
+        <div class="nav" style="float: left">
+            <div class="nav_item">
+                <a href="index.html">
+                    <p>首页</p>
+                    <p>Home</p>
+                </a>
+            </div>
+            <div class="nav_item">
+                <a href="movie-list.html">
+                    <p>电影</p>
+                    <p>Movie</p>
+                </a>
+            </div>
+            <div class="nav_item">
+                <a href="cinemadetail.html">
+                    <p>影院</p>
+                    <p>Cinema</p>
+                </a>
+            </div>
+            <div class="nav_item">
+                <a href="#">
+                    <p>热点</p>
+                    <p>Hoot</p>
+                </a>
+            </div>
+        </div>
+
+        <div class="search">
+            <form class="uk-search" data-uk-search>
+                <input class="uk-search" type="search" placeholder="search...">
+                <button class="uk-button uk-button-primary" type="button">搜索</button>
+            </form>
+        </div>
+    </header>
+
+
     <div class="movie-sbj" >
         <div class="movie-header">
             <div style="width: 320px;height:70px;margin: 0 auto;font-size: 20px;line-height: 52px;">
@@ -28,49 +87,34 @@
         </div>
     </div>
 
-    <div class="movie-search">
+    <div id="cate" class="movie-search" >
         <div class="movie-search-unit">
             <div class="before">类型：</div>
             <div class="after">
-                <ul class="uk-subnav uk-subnav-pill" data-uk-switcher="{connect:'#subnav-pill-content-1'}">
+                <ul id="categorys" class="uk-subnav uk-subnav-pill" data-uk-switcher="{connect:'#subnav-pill-content-1'}">
                     <li class="uk-active"><a href="#">全部</a></li>
-                    <li><a href="#">恐怖</a></li>
-                    <li><a href="#">爱情</a></li>
-                    <li><a href="#">爱情</a></li>
-                    <li><a href="#">爱情</a></li>
-                    <li><a href="#">爱情</a></li>
-                    <li><a href="#">爱情</a></li>
-                    <li><a href="#">爱情</a></li>
-                    <li><a href="#">爱情</a></li>
+                    <li v-for="category in categorys">
+                           <a :name="category.categoryId"  >{{category.categoryName}}</a>
+                    </li>
                 </ul>
             </div>
         </div>
         <div class="movie-search-unit">
             <div class="before">区域：</div>
             <div class="after">
-                <ul id="subnav-pill-content-1" class="uk-switcher" data-uk-switcher="{connect:'#subnav-pill-content-2'}">
+                <ul  class="uk-switcher" data-uk-switcher="{connect:'#subnav-pill-content-2'}">
                     <li class="uk-active">
-                        <ul class="uk-subnav uk-subnav-pill" data-uk-switcher>
+                        <ul id="local" class="uk-subnav uk-subnav-pill" data-uk-switcher>
                             <li class="uk-active"><a href="#">全部</a></li>
-                            <li><a href="#">大陆</a></li>
-                            <li><a href="#">大陆</a></li>
-                            <li><a href="#">大陆</a></li>
-                            <li><a href="#">大陆</a></li>
-                            <li><a href="#">大陆</a></li>
-                            <li><a href="#">大陆</a></li>
-                            <li><a href="#">大陆</a></li>
-                            <li><a href="#">大陆</a></li>
+                            <li><a name="大陆" href="#">大陆</a></li>
+                            <li><a name="美国" href="#">美国</a></li>
+                            <li><a name="韩国" href="#">韩国</a></li>
+                            <li><a name="日本" href="#">日本</a></li>
+                            <li><a name="港台" href="#">港台</a></li>
+                            <li><a name="泰国" href="#">泰国</a></li>
+                            <li><a name="印度" href="#">印度</a></li>
+                            <li><a name="法国" href="#">法国</a></li>
                         </ul>
-                    </li>
-                        <ul class="uk-subnav uk-subnav-pill" data-uk-switcher>
-                            <li class="uk-active"><a href="#">全部</a></li>
-                            <li><a href="#">大陆</a></li>
-                            <li><a href="#">爱情</a></li>
-                        </ul>
-                    <li>
-                    </li>
-                    <li><a href="#">Bazinga!</a>
-                    </li>
                 </ul>
             </div>
         </div>
@@ -82,24 +126,91 @@
 <div class="movie-show" id="app">
     <div class="movie-show-unit" v-for="film in pageInfo">
        <div class="img">
-           <img src="images/nezha1.jpg" >
+          <a :href="'javascript:skip('+(film.filmId)+')'"> <img :src="film.covers" ></a>
        </div>
        <div class="text">
            <span >{{film.filmName}}<br>{{film.grage}}分</span>
        </div>
     </div>
 </div>
-<div style="width: 100%;height: 150px;">
-    <ul id="data-uk-pagination" class="uk-pagination" data-uk-pagination="{items:1000, itemsOnPage:10, currentPage:50}"></ul>
+<div style="width: 600px;height:170px;margin: 0 auto;" id="pager">
+    <!--<ul class="uk-pagination" uk-margin style="float: left;margin-top: 0px;">
+        <li><a href="javascript:previous()"><span uk-pagination-previous>上一页</span></a></li>
+    </ul>-->
+   <!-- <ul id="data-uk-pagination" class="uk-pagination" :data-uk-pagination="{items:100, itemsOnPage:10, currentPage:0}" style="float: left;margin: 0 10px;">
+    </ul>-->
+    <!--<ul class="uk-pagination" uk-margin style="float: left;margin-top:0px;" >
+        <li><a href="javascript:next()"><span uk-pagination-next>下一页</span></a></li>
+    </ul>-->
+    <div class="pager">
+        <ul class="list-pager">
+            <li  v-if="pageInfo.total>0">
+                <a class="page_1" :href="'javascript:jumpTo('+1+')'"
+                   style="cursor: default"
+                >首页</a>
+            </li>
+            <li  v-if="pageInfo.pageNum>0">
+                <a class="page_1" :href="'javascript:jumpTo('+(pageInfo.pageNum-1)+')'"
+                   style="cursor: default"
+                >上一页</a>
+            </li>
+
+
+            <li :class="{active:i==pageInfo.pageNum}" v-for="i in pageInfo.navigatepageNums">
+                <a class="page_1" :href="'javascript:jumpTo('+i+')'"
+                   style="cursor: default"
+                > {{i}} </a>
+            </li>
+
+
+
+            <li  v-if="pageInfo.pageNum<pageInfo.pages">
+                <a class="page_1" :href="'javascript:jumpTo('+(pageInfo.pageNum+1)+')'"
+                   style="cursor: default"
+                >下一页</a>
+            </li>
+            <li  v-if="pageInfo.total>0">
+                <a class="page_1" :href="'javascript:jumpTo('+pageInfo.pages+')'"
+                   style="cursor: default"
+                >尾页</a>
+            </li>
+        </ul>
+    </div>
+
+</div>
+
+
+
+</div>
 </div>
 </body>
 <script>
+    var categoryId=null;
+    var local=null;
+    var currentPage=1;
     $(function () {
-        select();
+        selectFilm();
+        getAllCateiry();
         $('[data-uk-pagination]').on('select.uk.pagination', function(e, pageIndex){
-
-           /* alert('You have selected page: ' + (pageIndex+1));*/
+            currentPage=pageIndex+1;
+            selectFilm();
         });
+        $("body").on("click","#categorys li a",function (){
+            selectFilm(this.name)
+        });
+        $("body").on("click","#local li a",function (){
+
+            selectFilm(null,this.name)
+        });
+    });
+
+
+
+    var pager=new Vue({
+        el:"#pager",
+        data:{
+            pageInfo: ""
+        }
     });
 
     var app=new Vue({
@@ -107,25 +218,67 @@
         data:{
             pageInfo:[
 
-            ]
+            ],
+        }
+    });
+    var cate=new Vue({
+        el:"#cate",
+        data:{
+            categorys:[]
         }
     })
 
-    function select() {
+    function jumpTo(i) {
+        currentPage=i;
+        selectFilm(categoryId,local);
+    }
+
+
+
+    function getAllCateiry() {
         axios({
-            url:"http://localhost:8081/filmlist",
+            url:"http://localhost:8081/category",
+            method:"get",
+        }).then(function (res) {
+            this.cate.categorys=res.data.data;
+
+        })
+    }
+
+
+
+
+
+/*aria-expanded*/
+    function selectFilm(id,adds) {
+            if(id!=null){
+                categoryId=id;
+            }
+            if(adds!=null){
+                local=adds;
+            }
+        axios({
+            url:"http://localhost:8081/filmlistBelongGrading",
             method:"get",
             params:{
-                pageSize:1
+                categoryId:categoryId,
+                local:local,
+                pageSize:30,
+                currentPage:currentPage
             }
         }).then((res)=>{
-
+            console.log(res.data);
             var pageInfo=res.data.data;
+
+            var param="{items:"+pageInfo.total+", itemsOnPage:"+pageInfo.pageSize+", currentPage:1}";
+            $("#data-uk-pagination").attr("data-uk-pagination",param);
+            /*UIkit.toggle(element, options);*/
+
+            this.pager.pageInfo=pageInfo;
 
             this.app.pageInfo=pageInfo.list;
 
-            var param="{items:"+pageInfo.total+", itemsOnPage:10, currentPage:30}";
-            $("#data-uk-pagination").attr("data-uk-pagination",param);
+
 
             var Height=0;
             if(pageInfo.size%6==0){
@@ -135,8 +288,10 @@
             }
             $("#app").css("height",Height+"px");
 
+
         })
     }
+
 
 </script>
 </html>

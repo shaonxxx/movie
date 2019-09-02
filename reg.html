@@ -11,33 +11,181 @@
     <script src="./js/bootstrap.min.js"></script>
     <link rel="stylesheet" rev="stylesheet" type="text/css" media="all" href="./css/login.css">
     <script src="./js/jquery.validate.min.js"></script>
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-    <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
-    <script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.js"></script>
-    <![endif]-->
+	<script src="http://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+	<script src="./js/axios.min.js"></script>
+    <script>
+		$(function(){
+			axios.get("http://localhost:8080/user/session/")
+		});
+		
+		
+		
+		//**********一堆验证信息开始**********
+		function userNameVerify(){
+			$("#userName + b").empty();
+			var userNmae = $("#userName").val();
+			if(userName==null || userNmae==""){
+				$("#userName + b").html("用户名不能为空");
+				return false;
+			}
+			return true;
+		}
+		function passwordVerify(){
+			$("#password + b").empty();
+			var password = $("#password").val();
+			if(password==null || password==""){
+				$("#password + b").html("密码不能为空");
+				return false;
+			}
+			return true;
+		}
+		function mobileVerify(){
+			$("#mobile + b").empty();
+			var mobile = $("#mobile").val();
+			if(mobile==null || mobile==""){
+				$("#mobile + b").html("手机不能为空");
+				return false;
+			}
+			if(!/^1[3|4|5|7|8]\d{9}$/.test(mobile)){
+				$("#mobile + b").html("手机号码格式不正确");
+				return false;
+			}
+			return true;
+		}
+		function emailVerify(){
+			$("#email + b").empty();
+			var email = $("#email").val();
+			if(email==null || email==""){
+				$("#email + b").html("邮箱不能为空");
+				return false;
+			}
+			if(!/^\w+@[a-z0-9]+\.[a-z]{2,4}$/.test(email)){
+				$("#email + b").html("邮箱格式不正确");
+				return false;
+			}
+			return true;
+		}
+		// function nickNameVerify(){
+		// 	$("#nickName + b").empty();
+		// 	var nickName = $("#nickName").val();
+		// 	if(nickName==null || nickName==""){
+		// 		$("#nickName + b").html("昵称不能为空");
+		// 		return false;
+		// 	}
+		// 	return true;
+		// }
+		function verifyCode(){
+			$("#registCode + b").empty();
+			var registCode = $("#registCode").val();
+			if(registCode!=null && registCode!=""){
+				if(registCode.length==32){
+					return true;
+				}
+				$("#registCode + b").html("注册码长度不正确");
+				return false;
+			}
+			return true;
+		}
+		
+		//整体验证
+		function loginVerify(){
+			var count=0;
+			if(!userNameVerify()){
+				count+=1;
+			}
+			if(!passwordVerify()){
+				count+=1;
+			}
+			if(!mobileVerify()){
+				count+=1;
+			}
+			if(!emailVerify()){
+				count+=1;
+			}
+			// if(!nickNameVerify()){
+			// 	count+=1;
+			// }
+			if(!verifyCode()){
+				count+=1;
+			}
+			if(count>0){
+				return false;
+			}
+			return true;
+		}
+		
+		
+		//**********一堆验证信息结束**********
+		
+		
+		
+		
+		function base_registry(){
+			alert(loginVerify());
+			if(loginVerify()){
+				var user = $("#registry").serializeArray();  
+				var values = {};  
+				for( x in user ){  
+					values[user[x].name] = user[x].value;  
+				}
+				console.info(values);
+				axios.post("http://localhost:8080/user",values)
+				.then(res=>{
+					console.info(res.data);
+					$("b").empty();
+					$("#userName + b").html(res.data.nameError);
+					$("#password + b").html(res.data.pwdError);
+					$("#mobile + b").html(res.data.mobileError);
+					$("#email + b").html(res.data.emailError);
+					$("#nickName + b").html(res.data.nicknameError);
+					$("#registCode + b").html(res.data.registryCodeError);
+					if(res.data.message!="" && res.data.message!=null){
+						alert(res.data.message);
+					}
+				});
+			}
+		}
+		function strFomat(str){
+			var index = str.lastIndexOf(","); // 14
+			var stringa = str.slice(1,index);//",lov"
+			console.info(stringa);
+			return stringa;
+		}
+		
+	</script>
 </head>
-<body><form class="main-box" role="form" action="" method="post">
+<body><form id="registry" class="main-box" role="form" action="" method="post">
     <h3 class="form-header">用户注册</h3>
+	<div class="form-group">
+	    <label for="userName">用户名：</label>
+	    <input type="text" onblur="userNameVerify()" class="form-control" id="userName" name="userName" placeholder="输入用户名"><b></b>
+	</div>
+    <div class="form-group">
+        <label for="password">密码：</label>
+        <input type="password" onblur="passwordVerify()" class="form-control" id="password" name="password" placeholder="输入注册密码"><b></b>
+    </div>
+	<div class="form-group">
+	    <label for="mobile">手机：</label>
+	    <input type="text" onblur="mobileVerify()" class="form-control" id="mobile" name="mobile" placeholder="确认密码"><b></b>
+	</div>
     <div class="form-group">
         <label for="email">邮箱：</label>
-        <input type="email" class="form-control" id="email" name="email" placeholder="Enter email">
+        <input type="email" onblur="emailVerify()" class="form-control" id="email" name="email" placeholder="输入邮箱"><b></b>
     </div>
     <div class="form-group">
-        <label for="email">昵称：</label>
-        <input type="email" class="form-control" id="email" name="email" placeholder="Name">
+        <label for="nickName">昵称：</label>
+        <input type="text" class="form-control" id="nickName" name="nickname" placeholder="输入昵称"><b></b>
     </div>
-    <div class="form-group">
-        <label for="pwd">密码：</label>
-        <input type="password" class="form-control" id="pwd" name="password" placeholder="Password">
-    </div>
-    <div class="form-group">
+	<div class="form-group">
+	    <label for="registCode">注册码：</label>
+	    <input type="text" class="form-control" id="registCode" name="registCode" placeholder="注册码为邀请人的邀请码"><b></b>
+	</div>
+    <!-- <div class="form-group">
         <label for="pwd">确认密码：</label>
-        <input type="password" class="form-control" id="pwd" name="password" placeholder="Password">
-    </div>
-    <button type="submit" class="btn btn-primary btn-block">提交信息</button>
-    <a class="extra" href="">登录</a><a class="extra" href="">找回密码？</a><a class="extra" href="">回到首页</a>
+        <input type="password" class="form-control" id="pwd" name="password" placeholder="确认密码">
+    </div> -->
+    <button type="button" onclick="base_registry()" class="btn btn-primary btn-block">提交信息</button>
+    <a class="extra" href="login.html">登录</a><a class="extra" href="">找回密码？</a><a class="extra" href="">回到首页</a>
 </form>
 </body>
 </html>

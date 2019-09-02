@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<title>登录-迅影网,高清电影下载,迅雷电影下载,最新电影下载</title>
+    	<meta name="keywords" content="高清电影下载,迅雷电影下载,最新电影下载,迅影网,高清迅雷下载" />
+    	<meta name="description" content="迅影网通过程序自动收集了很多最新电影的资源,喜欢看电影的可以到这下载,新老大片一网收录,更多内容期待您的发现。" />
+    	<link rel="icon" href="">
+		<link rel="stylesheet" href="css/laydate.css" />
+		<link rel="stylesheet" href="//s3plus.meituan.net/v1/mss_e2821d7f0cfe4ac1bf9202ecf9590e67/cdn-prod/file:5788b470/common.0a548310.css" />
+		<link rel="stylesheet" href="//s3plus.meituan.net/v1/mss_e2821d7f0cfe4ac1bf9202ecf9590e67/cdn-prod/file:5788b470/profile-profile.13d06bf4.css" />
+
+		<link href="css/style.css" rel="stylesheet" type="text/css">
+		<link href="css/components/slideshow.css" rel="stylesheet" type="text/css">
+		<link href="css/components/dotnav.css" rel="stylesheet" type="text/css">
+		<link href="css/components/slidenav.css" rel="stylesheet" type="text/css">
+		<link href="css/components/search.min.css" rel="stylesheet" type="text/css">
+		<link href="css/header.css" rel="stylesheet" type="text/css">
+		<link href="css/uikit.css" rel="stylesheet" type="text/css">
+		<script src="js/uikit.js" type="text/javascript"></script>
+		<script src="./js/vue.js"></script>
+		<script src="js/jquery-2.1.4.js" type="text/javascript"></script>
+		<script type="text/javascript" src="js/jquery-2.1.4.js" ></script>
+		<script type="text/javascript" src="js/jQuery-2.2.2-min.js" ></script>
+		<script type="text/javascript" src="js/ajaxfileupload.js" ></script>
+		<script type="text/javascript">
+			/*$(function(){
+				$("#headPic").click(function(){
+					$('#img').click();
+					$('#img').on("change",function(){
+						var objUrl=getObjectURL(this.files[0]);
+						if(objUrl){
+							$("#headPic").attr("src",objUrl0);
+						}
+					});
+				});*/
+			
+			
+			
+			function changeImg(){
+				$('#img').click();
+			};
+			
+			function sendChange(){
+				ajaxFileUpload();
+			};
+			
+			function ajaxFileUpload(){
+				 var formData =new FormData();
+				 formData.append('multipartFile',$('#img')[0].files[0]);
+				 
+				if(!validate_img($('#img'))){
+				 	return;
+				 }
+				 
+				 
+				 $.ajax({
+				 	type:"post",
+				 	url:"http://localhost:8082/userInfoHeadImg/"+token,
+				 	data:formData,
+				 	processData:false,
+				 	contentType:false,
+				 	cache:false,
+				 	success:function(result){
+				 		console.log(result)
+				 		alert(result.msg);
+				 		alert(result.img);
+				 		$("#headPic").attr('src','http://localhost:8082/img/'+result.img);
+				 	}
+				 });
+			};
+			
+		
+			
+			//限制上传文件的类型和大小
+           function validate_img(ele){
+               // 返回 KB，保留小数点后两位
+               //alert((ele.files[0].size/(1024*1024)).toFixed(2));
+               var file = ele.val();
+               if(!/.(gif|jpg|jpeg|png|GIF|JPG|bmp)$/.test(file)){
+
+                   alert("图片类型必须是.gif,jpeg,jpg,png,bmp中的一种");
+                   return false;
+               }else{
+                   //alert((ele.files[0].size).toFixed(2));
+                   //返回Byte(B),保留小数点后两位
+                   if(((ele[0].files[0].size).toFixed(2))>=(2*1024*1024)){
+
+                       alert("请上传小于2M的图片");
+                       return false;
+                   }else  return true;
+               }
+               return false;
+
+           }
+ 
+		</script>
+	</head>
+
+	<body style="background-color: #F1F1EF">
+	<div id="top" >
+		<div class="top_main" >
+			<ul class="uk-breadcrumb" style="float: right;margin-right: 300px;">
+				<li><a href="">会员中心</a></li>
+				<li><a href="login.html">登录</a></li>
+				<li><a href="reg.html">注册</a></li>
+				<li class="uk-active"><span>...</span></li>
+			</ul>
+		</div>
+	</div>
+		<div class="header">
+			<!--<embed style="width: 100% ;height: 119px;" type="text/html" src="header.html" />-->
+
+			<!--<div class="user-info">
+				<div class="user-avatar has-login">
+					<img :src="'http://localhost:8082/img/'+user.headimg">
+					<span class="caret"></span>
+					<ul class="user-menu">
+						<li class="text">
+							<a href="/profile/orders">我的订单</a>
+						</li>
+						<li class="text login-name" title="Ilj455892398">
+							<a href="javascript:void 0">基本信息</a>
+						</li>
+						<li class="text">
+							<a href="javascript:void 0" class="J-logout" data-act="logout-click">退出登录</a>
+						</li>
+					</ul>
+				</div>
+			</div>-->
+
+			<!--<form action="/query" target="_blank" class="search-form" data-actform="search-click">
+				<input name="kw" class="search" type="search" maxlength="32" placeholder="找影视剧、影人" autocomplete="off">
+				<input class="submit" type="submit" value="">
+			</form>-->
+
+<!--			<div class="app-download">
+				<a href="/app" target="_blank">
+					<span class="iphone-icon"></span>
+					<span class="apptext">APP下载</span>
+					<span class="caret"></span>
+					<div class="download-icon">
+						<p class="down-title">扫码下载APP</p>
+						<p class='down-content'>选座更优惠</p>
+					</div>
+				</a>
+			</div>-->
+		</div>
+
+		<div class="header-placeholder"></div>
+
+		<div class="container" id="app" class="page-profile/profile" style="margin-top: -40px;">
+			<div class="content">
+				<div class="main">
+					<div class="info-content clearfix">
+						<div class="user-profile-nav">
+							<h1>个人中心</h1>
+							<a href="/profile/orders" class="orders ">我的订单</a>
+							<a href="/profile" class="profile active">基本信息</a>
+						</div>
+
+						<div class="profile-container">
+							<div class="profile-title">
+								基本信息
+							</div>
+							<div class="avatar-container">
+								<div class="avatar-content">
+									<img style="border: 0px red solid;" class="J-setted-avatar" id="headPic" :src="'http://localhost:8082/img/'+user.headimg">
+							
+									<div class="J-upload-avatar-w upload-avatar-image" style="background-color: #F1F1EF">
+										
+										<button type="button" class="J-upload-avatar upload-btn" onclick="changeImg()">更换头像</button>
+										<input type="file" id="img" style="opacity: 0;" name="multipartFile" onchange="sendChange()"/>
+									</div>
+									<div class="tips" style="background-color: #F1F1EF;margin: 0px;" >支持JPG,JPEG,PNG格式,且文件需小于1M</div>
+								</div>
+							</div>
+							<form id="J-userexinfo-form" action="" class="userexinfo-form">
+								<div class="userexinfo-form-section">
+									<p>昵称：</p>
+									<span>
+	              <input type="text" name="nickname" id="userexinfo-form-nickname" class="ui-checkbox" placeholder="2-15个字，支持中英文、数字" v-model="user.nickname">
+	            </span>
+								</div>
+								<div class="userexinfo-form-section">
+									<p>性别：</p>
+									<span>
+	              <input type="radio" name="gender" id="userexinfo-form-gender-1" value="male" v-model="user.gender" class="ui-radio radio-first">
+	              <label for="userexinfo-form-gender-1">男</label>
+	            </span>
+									<span>
+	              <input type="radio" name="gender" id="userexinfo-form-gender-2" value="female" v-model="user.gender" class="ui-radio">
+	              <label for="userexinfo-form-gender-2">女</label>
+	            </span>
+								</div>
+								<div class="userexinfo-form-section">
+									<p>生日：</p>
+									<span>
+	              <input type="text" name="birth" id="userexinfo-form-birth" class="ui-checkbox" placeholder="选择日期" v-model="user.birth" @click="setDate">
+	            </span>
+								</div>
+								<div class="userexinfo-form-section">
+									<p>电话：</p>
+									<span>
+	              <input type="text" name="mobile" id="userexinfo-form-mobile" class="ui-checkbox" placeholder="2-15个字，支持中英文、数字" v-model="user.mobile">
+	            </span>
+								</div>
+								<div class="userexinfo-form-section">
+									<p>邀请码：</p>
+									<span>
+	              <input type="text" name="invite_code" id="userexinfo-form-invitecode" class="ui-checkbox" v-model="user.inviteCode" readonly="readonly">
+	            </span>
+								</div>
+
+								<input type="hidden" name="userId" v-model="user.userId">
+								<div class="userexinfo-bottom-section clearfix">
+									<button type="button" class="form-save-btn" @click="modify()" >保存</button>
+								</div>
+
+							</form>
+						</div>
+
+					</div>
+				</div>
+
+				<div class="body-mask"></div>
+				<div id="img-cropper" class="img-cropper">
+					<div class="img-cropper-container">
+						<div class="img-cropper-header">
+							上传头像
+							<span class="close-icon"></span>
+						</div>
+						<div class="img-cropper-content">
+							<div class="img-main">
+								<div class="img-main-wrapper">
+									<img src="https://img.meituan.net/maoyanuser/b9a2e18c357dadbdcba8db89448a5ffb15298.png">
+								</div>
+							</div>
+							<div class="img-preview">
+								<p>预览</p>
+								<div class="img-preview-block"></div>
+							</div>
+						</div>
+						<div class="img-cropper-footer">
+							<div class="img-btn-confirm">
+								确认
+							</div>
+							<div class="img-btn-cancel">
+								取消
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+		<div class="footer">
+			<p class="friendly-links">
+				关于猫眼 :
+				<a href="http://ir.maoyan.com/s/index.php#pageScroll0" target="_blank">关于我们</a>
+				<span></span>
+				<a href="http://ir.maoyan.com/s/index.php#pageScroll1" target="_blank">管理团队</a>
+				<span></span>
+				<a href="http://ir.maoyan.com/s/index.php#pageScroll2" target="_blank">投资者关系</a>
+				&nbsp;&nbsp;&nbsp;&nbsp; 友情链接 :
+				<a href="http://www.meituan.com" data-query="utm_source=wwwmaoyan" target="_blank">美团网</a>
+				<span></span>
+				<a href="http://www.gewara.com" data-query="utm_source=wwwmaoyan">格瓦拉</a>
+				<span></span>
+				<a href="http://i.meituan.com/client" data-query="utm_source=wwwmaoyan" target="_blank">美团下载</a>
+				<span></span>
+				<a href="https://www.huanxi.com" data-query="utm_source=maoyan_pc" target="_blank">欢喜首映</a>
+			</p>
+			<p class="friendly-links">
+				商务合作邮箱：v@maoyan.com 客服电话：10105335 违法和不良信息举报电话：4006018900
+			</p>
+			<p class="friendly-links">
+				用户投诉邮箱：tousujubao@meituan.com 舞弊线索举报邮箱：wubijubao@maoyan.com
+			</p>
+			<p class="friendly-links  credentials">
+				<a href="/about/licence/1" target="_blank">中华人民共和国增值电信业务经营许可证 京B2-20190350</a>
+				<span></span>
+				<a href="/about/licence/4" target="_blank">营业性演出许可证 京演（机构）（2019）4094号</a>
+			</p>
+			<p class="friendly-links  credentials">
+				<a href="/about/licence/3" target="_blank">广播电视节目制作经营许可证 （京）字第08478号</a>
+				<span></span>
+				<a href="/about/licence/2" target="_blank">网络文化经营许可证 京网文（2019）3837-369号 </a>
+			</p>
+			<p class="friendly-links  credentials">
+				<a href="/rules/agreement" target="_blank">猫眼用户服务协议 </a>
+				<span></span>
+				<a href="/rules/rule" target="_blank">猫眼平台交易规则总则 </a>
+				<span></span>
+				<a href="/rules/privacy" target="_blank">隐私政策 </a>
+			</p>
+			<p class="friendly-links  credentials">
+				<a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010102003232" target="_blank">京公网安备 11010102003232号
+				</a>
+			</p>
+			<p>北京猫眼文化传媒有限公司</p>
+			<p>
+				&copy;2016 猫眼电影 maoyan.com</p>
+			<div class="certificate">
+				<a href="http://sq.ccm.gov.cn:80/ccnt/sczr/service/business/emark/toDetail/350CF8BCA8416C4FE0530140A8C0957E" target="_blank">
+					<img src="http://p0.meituan.net/moviemachine/e54374ccf134d1f7b2c5b075a74fca525326.png" />
+				</a>
+				<a href="/about/licence/5" target="_blank">
+					<img src="http://p1.meituan.net/moviemachine/805f605d5cf1b1a02a4e3a5e29df003b8376.png" />
+				</a>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/vue.js" ></script>
+		<script type="text/javascript" src="js/axios.min.js" ></script>
+		<script type="text/javascript" src="js/laydate.js" ></script>
+		<script>
+		
+			let token=JSON.parse(localStorage.getItem("loginName"));
+			alert(token);
+			var app=new Vue({
+				el:"#app",
+				data:{
+					user:{
+						nickname:"",
+						mobile:"",
+						gender:"",
+						inviteCode:"",
+						userId:"",
+						headimg:""
+					}
+					
+				},
+				created(){
+					axios.post("http://localhost:8082/userInfo/"+token,{
+							"token":token
+					},{
+						withCredentials:true
+					})
+					.then(function(result){
+						console.log(result);
+						alert(result);
+						this.app.user=result.data.user;	
+						
+					});
+				},
+				methods:{
+					modify:function(){
+						let _this=this;
+						console.log(_this.user);
+						axios.put("http://localhost:8082/userInfoModify/"+this.user.userId,{
+									"user":_this.user,
+									"userId":_this.user.userId,
+									"nickname":_this.user.nickname,
+									"gender":_this.user.gender,
+									"mobile":_this.user.mobile,
+									
+						})
+						.then(function(result){
+							console.log(result);
+							
+						})
+					},
+					setDate(){
+						let _this=this;
+						laydate.render({
+							elem:'#userexinfo-form-birth',
+							done:(value)=>{
+							this.date=value;
+							alert(value);
+							}
+						})
+					}
+				}
+			});
+		</script>
+	</body>
+
+</html>

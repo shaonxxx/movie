@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<head>
+	<title>猫眼电影 - 一网打尽好电影</title>
+
+	<meta charset="utf-8">
+	<meta name="description" content="">
+
+	<link rel="stylesheet" href="//s3plus.meituan.net/v1/mss_e2821d7f0cfe4ac1bf9202ecf9590e67/cdn-prod/file:5788b470/common.0a548310.css" />
+	<link rel="stylesheet" href="//s3plus.meituan.net/v1/mss_e2821d7f0cfe4ac1bf9202ecf9590e67/cdn-prod/file:5788b470/profile-profile.13d06bf4.css" />
+	<link rel="stylesheet" href="css/layui.css" />
+	<link rel="stylesheet" href="css/bootstrap.min.css" />
+	<link href="css/header.css" rel="stylesheet" type="text/css">
+	<link href="css/uikit.css" rel="stylesheet" type="text/css">
+
+	<script src="js/uikit.js" type="text/javascript"></script>
+	<script type="text/javascript" src="js/jquery-2.1.4.js"></script>
+	<script type="text/javascript" src="js/jQuery-2.2.2-min.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			to_page(1);
+		});
+
+		function to_page(currentPage) {
+			$.ajax({
+				url: "http://192.168.10.183:3333/queryUserAllOrders/1",
+				data: "&currentPage=" + currentPage,
+				type: "get",
+				success: function(data) {
+					build_pageInfo(data);
+					build_pageNave(data);
+					build_order(data);
+				}
+			})
+		}
+
+		function build_order(data) {
+			$("#myorder").empty();
+			$.each(data.list, function(index, item) {
+				var status;
+				if(item.orderState == 1) {
+					status = '待支付';
+				} else if(item.orderState == 2) {
+					status = '已付款未观影';
+				} else if(item.orderState == 3) {
+					status = "已观影";
+				} else if(item.orderState == 4) {
+					status = "已退款";
+				} else if(item.orderState == 5) {
+					status = "待评价";
+				} else if(item.orderState == 6) {
+					status = "无效";
+				};
+				$("#myorder").append('<div class="order-box"><div class="order-header">' +
+					'<span class="order-date">订单编号' + item.orderNum + '</span>' +
+					'<span class="order-id">蜗牛订单号:' + item.orderId + '</span>' +
+					'<a href="javascript:void(0)" class="del-detail" onclick="delete(' + item.walletOrderId + ',this)">删除</a></span>' +
+					'</div><div class="order-body"><div class="poster"><img src="#"></div>' +
+					'<div class="order-content">' +
+					'<div class="movie-name"><<' + item.filmName + '>></div>' +
+					'<div class="hall-ticket">' + item.hallName + '<span>' + item.seat + '</span></div>' +
+					'<div class="show-time">订单时间' + item.createTime + '</div></div>' +
+					'<div class="order-price">付款:' + item.totalPrice + '</div>' +
+					'<div class="order-status">' + status + '</div>' +
+					'<div class="actions">Pay:'+item.payType+'<div>' +
+					'<a href="javascript:void(0)" class="order-detail" data-act="orders-detail-click" data-bid="b_y190atas" onclick="find(' + item.orderId + ',this)">查看详情</a>' + '</div></div>');
+			});
+		}
+
+		function build_pageInfo(data) {
+			$("#page_info").empty();
+			$("#page_info").append("当前" + data.pageNum + "页，共" +
+				data.pages + "页，共" + data.total + "条记录")
+		}
+
+		function build_pageNave(data) {
+			$("#page_nave").empty();
+
+			var ul = $("<ul></ul>").addClass("pagination");
+			var firstPageLi = $("<li></li>").append($("<a></a>").append("首页").attr("href", "#"));
+			var prePageLi = $("<li></li>").append($("<a></a>").append($("<span></span>").append("&laquo;")));
+			if(data.hasPreviousPage == false) {
+				firstPageLi.addClass("disabled");
+				prePageLi.addClass("disabled");
+			}
+
+			firstPageLi.click(function() {
+				to_page(1);
+			});
+			prePageLi.click(function() {
+				to_page(data.pageNum - 1);
+			});
+
+			var nextPageLi = $("<li></li>").append($("<a></a>").append($("<span></span").append("&raquo;")));
+			var lastPageLi = $("<li></li>").append($("<a></a>").append("末页").attr("href", "#"));
+			if(data.hasNextPage == false) {
+				nextPageLi.addClass("disabled");
+				lastPageLi.addClass("disabled");
+			}
+
+			nextPageLi.click(function() {
+				to_page(data.pageNum + 1);
+			});
+			lastPageLi.click(function() {
+				to_page(data.pages);
+			});
+
+			ul.append(firstPageLi).append(prePageLi);
+			$.each(data.navigatepageNums, function(index, item) {
+				var numLi = $("<li></li>").append($("<a></a>").append(item));
+				if(data.pageNum == item) {
+					numLi.addClass("active");
+				}
+				numLi.click(function() {
+					to_page(item);
+				});
+				ul.append(numLi);
+			});
+
+			ul.append(nextPageLi).append(lastPageLi);
+			var nav = $("<nav></nav>").append(ul);
+			nav.appendTo("#page_nave");
+		}
+	</script>
+</head>
+
+<body>
+	<div id="top" style="background-color: #F1F1EF">
+		<div class="top_main">
+			<ul class="uk-breadcrumb" style="float: right;margin-right: 300px;">
+				<li>
+					<a href="">会员中心</a>
+				</li>
+				<li>
+					<a href="login.html">登录</a>
+				</li>
+				<li>
+					<a href="reg.html">注册</a>
+				</li>
+				<li class="uk-active"><span>...</span></li>
+			</ul>
+		</div>
+	</div>
+	<div class="header">
+	</div>
+	<table id="orderList">
+	</table>
+	<div class="header-placeholder"></div>
+	<div class="container" id="app" class="page-profile/profile">
+		<div class="content">
+			<div class="main">
+				<div class="info-content clearfix">
+					<div class="user-profile-nav">
+						<h1>个人中心</h1>
+						<a href="userCenter1.html" class="profile ">基本信息</a>
+						<a href="order.html" class="orders active">我的订单</a>
+						<a href="coupon.html" class="coupon">优惠券</a>
+					</div>
+
+					<div class="orders-container">
+						<div class="profile-title">我的订单</div>
+						<div class="order-box" id="myorder"></div>
+
+						<div class="col-md-6" id="page_info">
+
+						</div>
+						<div class="col-md-6" id="page_nave">
+
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+	</div>
+
+	<div class="footer">
+
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>退款</title>
+    <link rel="stylesheet" href="layui/css/layui.css" media="all">
+    <link rel="stylesheet" href="style/admin.css" media="all">
+    <script src="js/jquery-2.1.4.js"></script>
+    <script src="layui/layui.js"></script>
+</head>
+<body>
+<form class="layui-form" action="" style="margin-top: 100px;margin-left: 400px; width: 600px;height: 100px;">
+    <div class="layui-form-item">
+        <label class="layui-form-label">订单编号</label>
+        <div class="layui-input-block">
+            <input type="text" name="out_trade_no" value="1111" class="layui-input layui-disabled" disabled>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">支付交易号</label>
+        <div class="layui-input-block">
+            <input type="text" name="trade_no"class="layui-input layui-disabled" disabled>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <label class="layui-form-label">退款金额</label>
+        <div class="layui-input-block">
+            <input type="text" name="refund_amount" class="layui-input layui-disabled" disabled>
+        </div>
+    </div>
+    <div class="layui-form-item layui-form-text">
+        <label class="layui-form-label">退款原因</label>
+        <div class="layui-input-block">
+            <textarea name="refund_reason" placeholder="请输入内容" class="layui-textarea"></textarea>
+        </div>
+    </div>
+    <div class="layui-form-item">
+        <div class="layui-input-block">
+            <button class="layui-btn" lay-submit lay-filter="formDemo">立即提交</button>
+            <a href="index.html" class="layui-btn layui-btn-primary">回到首页</a>
+        </div>
+    </div>
+</form>
+
+<script>
+    //Demo
+    layui.use('form', function(){
+        var form = layui.form;
+
+        //监听提交
+        form.on('submit(formDemo)', function(data){
+            $.ajax({
+                url:"/pay/refund",
+                data: data.field,
+                type: "post",
+                dataType:"json",
+                success:function (result) {
+                    if (result.code == 200){
+                        layer.alert(result.message);
+                        window.location.href = "/index.html";
+                    }else {
+                        layer.alert(result.message);
+                    }
+                }
+            });
+            return false;
+        });
+    });
+</script>
+</body>
+</html>

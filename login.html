@@ -1,42 +1,260 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head>
-    <meta charset="utf-8">
-    <title>登录-迅影网,高清电影下载,迅雷电影下载,最新电影下载</title>
-    <meta name="keywords" content="高清电影下载,迅雷电影下载,最新电影下载,迅影网,高清迅雷下载" />
-    <meta name="description" content="迅影网通过程序自动收集了很多最新电影的资源,喜欢看电影的可以到这下载,新老大片一网收录,更多内容期待您的发现。" />
-    <link rel="icon" href="">
-    <link rel="stylesheet" href="./css/bootstrap.css">
-    <script src="./js/jquery-1.11.3.min.js"></script>
-    <script src="./js/bootstrap.min.js"></script>
-    <link rel="stylesheet" rev="stylesheet" type="text/css" media="all" href="./css/login.css">
-    <script src="./js/jquery.validate.min.js"></script>
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
+	<head>
+		<meta charset="utf-8">
+		<title>登录-迅影网,高清电影下载,迅雷电影下载,最新电影下载</title>
+		<meta name="keywords" content="高清电影下载,迅雷电影下载,最新电影下载,迅影网,高清迅雷下载" />
+		<meta name="description" content="迅影网通过程序自动收集了很多最新电影的资源,喜欢看电影的可以到这下载,新老大片一网收录,更多内容期待您的发现。" />
+		<link rel="icon" href="">
+		<link rel="stylesheet" href="./css/bootstrap.css">
+		<script src="./js/jquery-1.11.3.min.js"></script>
+		<script src="./js/bootstrap.min.js"></script>
+		<link rel="stylesheet" rev="stylesheet" type="text/css" media="all" href="./css/login.css">
+		<link rel="stylesheet" href="css/jquery-ui.css">
+		<script src="./js/jquery.validate.min.js"></script>
+		<script src="js/jquery-ui.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+		<!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
+		<script src="js/axios.min.js"></script>
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
     <script src="http://apps.bdimg.com/libs/html5shiv/3.7/html5shiv.min.js"></script>
     <script src="http://apps.bdimg.com/libs/respond.js/1.4.2/respond.js"></script>
     <![endif]-->
-</head>
-<body><form class="main-box" role="form" action="" method="post">
-    <h3 class="form-header">用户登录</h3>
-    <div class="form-group">
-        <label for="email">邮箱：</label>
-        <input type="email" class="form-control" id="email" name="email" placeholder="Enter email">
-    </div>
-    <div class="form-group">
-        <label for="pwd">密码：</label>
-        <input type="password" class="form-control" id="pwd" name="password" placeholder="Password">
-    </div>
-    
+		<script>
+			$(function(){
+				$("#tabs").tabs({
+					// event:"mouseover",
+					event:"click"
+				});
+			});
+			axios.defaults.withCredentials=true;
+			// const service = axios.create({
+			// 	withCredentials:true,//跨域设置
+			// 	// baseURL:process.env.BASE_API,//API的BASE_API
+			// 	timeout:5000
+			// })
+			
+			
+		var mobile;
+		var code;
+		var params;
+		var loginName;
+		var password;
+		
+		
+		//手机号码格式验证
+		function phonVerify(){
+			mobile=$("#mobile").val();
+			$("b").empty();
+			var pattern=/^1[3|4|5|7|8]\d{9}$/;
+			if(mobile==null || mobile==""){
+				$("#mobile + b").html("手机号码不能为空");
+				return false;
+			}else if(!pattern.test(mobile)){
+				$("#mobile + b").html("手机号码格式不正确");
+				return false;
+			}
+			return true;
+		}
+		
+		//手机登录整体验证
+		function mobileVerify(){
+			
+			code=$("#code").val();
+			var count = 0;
+			if(!phonVerify()){
+				count+=1;
+			}
+			if(!/^\d{6}$/.test(code)){
+				count+=1;
+				$("#code + b").html("验证码格式不正确");
+			}
+			if(count>0){
+				return false;
+			}
+			return true;
+		}
+		
+		//普通登录验证
+		function baseVerify(){
+			$("b").empty();
+			loginName = $("#loginName").val();
+			password = $("#pwd").val();
+			var count = 0;
+			if(loginName==null || loginName==""){
+				$("#loginName + b").html("登录账号不能为空");
+				console.info("账户")
+				count+=1;
+			}
+			if(password==null || password==""){
+				$("#pwd + b").html("登录密码不能为空");
+				console.info("密码")
+				count+=1;
+			}
+			if(count>0){
+				return false;
+			}
+			return true;
+		}
+		
+		//普通登录渠道
+		function base_login(){
+			params = new URLSearchParams();
+			loginName = $("#loginName").val();
+			password = $("#pwd").val();
+			if(baseVerify()){
+				var remember = $("#remember").prop("checked");
+				// alert(loginName+"--"+password+"--"+remember);
+				params.append("loginName",loginName);
+				params.append("password",password);
+				params.append("remember",remember);
+				// *************************这个地方有需要改的url*************************
+				
+				axios.post("http://localhost:8082/user/session",params)
+				.then(res=>{
+					console.info(res);
+					if(res.data!=""){
+						console.info(res.data);
+						// alert(res.data.passwordError);
+						$("b").empty();
+						$("#loginName + b").html(res.data.loginNameError);
+						$("#pwd + b").html(res.data.passwordError);
+						$("label + b").html(res.data.message);
+					}
+					else{
+						console.info(res.data);
+						alert("登录成功");
+						// *************************这个地方有需要改的url*************************
+						// window.open('index.html','_self');
+						localStorage.setItem("loginName",loginName);
+						window.location.href="index.html";
+					}
+				})
+			}
+		}
+		
+		// 手机登录渠道
+		function mobile_login(){
+			if(mobileVerify()){
+				params = new URLSearchParams();
+				mobile = $("#mobile").val();
+				code = $("#code").val();
+				params.append("mobile",mobile);
+				params.append("code",code);
+				axios.post("http://localhost:8080/user/mobile/session",params)
+				.then(res=>{
+					console.info(res);
+					if(res.data!=""){
+						// alert(res.data.passwordError);
+						$("b").empty();
+						$("#mobile + b").html(res.data.mobileError);
+						$("#code + b").html(res.data.codeError);
+						if(res.data.message!=""){
+							alert(res.data.message);
+						}
+					}else{
+						alert("登录成功");
+						// *************************这个地方有需要改的url*************************
+						window.open('index.html','_self');
+					}
+				})
+			}
+		}
+		
+		// 发送短信
+		function send_code(){
+			mobile = $("#mobile").val();
+			if(phonVerify()){
+				axios.get("http://localhost:8080/user/smsCode/"+mobile)
+				.then(res=>{
+					console.info(res.data);
+					if(res.data!=""){
+						$("b").empty();
+						$("#mobile + b").html(res.data.mobileError);
+					}else{
+						// alert("验证码发送成功，请在60秒内登录");
+						//点击发送后,禁止点击
+						$('#sendCode').attr('disabled',true);
+						//设定时间为60秒
+						nums=5;
+						//定时器设定变量名,便于清除
+						clock = setInterval(doLoop, 1000);
+						// *************************这个地方有需要改的url*************************
+						// window.open('index.html','_self');
+					}
+				})
+			}
+		}
+		
+		// 按钮定时
+		function doLoop(){
+		            nums--;
+		            if(nums > 0){
+		               $('#sendCode').html(nums+'秒后可再次点击');
+		               $('#sendCode').attr('title',nums+'秒后重新发送');
+		            }else{
+		                //时间为0时,清除定时器,可以再次点击发送短信
+		                clearInterval(clock); //清除js定时器
+		                $('#sendCode').attr('disabled',false);
+		                $('#sendCode').attr('title','点击重新发送');
+		                $('#sendCode').html('点击发送短信');
+		            }
+		}
+		
+	</script>
+	</head>
+	<body>
+		<div id="tabs">
+			<ul>
+				<li><a href="#tabs-1">用户登录</a></li>
+				<li><a href="#tabs-2">手机登录</a></li>
+			</ul>
+			<div id="tabs-1">
+				<!-- *************************这个地方有需要改的url************************* -->
+				<form id="login_base" class="main-box" role="form" action="http://localhost:8080/user/session" method="post">
+					<!-- <h3 class="form-header login1" style="text-align: left;float: left;color: #337AB7;">用户登录</h3>
+			<h3  class="form-header login2" style="text-align: right;">手机号登录</h3> -->
+					<div class="form-group" style="border: #777790,1px;">
+						<label for="loginName">账户：</label>
+						<input type="text" class="form-control" id="loginName" name="loginName" placeholder="请输入用户名/邮箱/手机">
+						<b></b>
+					</div>
+					<div class="form-group">
+						<label for="pwd">密码：</label>
+						<input type="password" class="form-control" id="pwd" name="password" placeholder="请输入密码">
+						<b></b>
+					</div>
+					<div class="checkbox">
+						<label>
+							<input id="remember" name="remember" value="yes" type="checkbox"> 记住登录(30天)
+						</label>
+						<b></b>
+					</div>
+					<button type="button" onclick="base_login()" class="btn btn-primary btn-block">登录</button>
+					<a class="extra" href="reg.html">注册</a><a class="extra" href="">找回密码？</a><a class="extra" href="index.html">回到首页</a>
+				</form>
+			</div>
+			<div id="tabs-2">
+				<form id="login_mobile" class="main-box" role="form" action="" method="post">
+					<!-- <h3 class="form-header login1" style="text-align: left;float: left;color: black;">用户登录</h3>
+			<h3 class="form-header login2" style="text-align: right;color: #337AB7;">手机号登录</h3> -->
+					<div class="form-group">
+						<label for="mobile">手机号：</label>
+						<input type="text" class="form-control" id="mobile" name="mobile" placeholder="请输入手机号"><b></b>
+					</div>
+					<button type="button" id="sendCode" onclick="send_code()" class="btn btn-primary btn-block">发送验证码</button>
+					<div class="form-group">
+						<label for="code">验证码：</label>
+						<input type="code" class="form-control" id="code" name="code" placeholder="请输入验证码"><b></b>
+					</div>
 
-    <div class="checkbox">
-        <label>
-            <input name="remember" value="yes" type="checkbox"> 记住登录(30天)
-        </label>
-    </div>
-    <button type="submit" class="btn btn-primary btn-block">确认信息</button>
-    <a class="extra" href="">注册</a><a class="extra" href="">找回密码？</a><a class="extra" href="">回到首页</a>
-</form>
-</body>
+					<button type="button" onclick="mobile_login()" class="btn btn-primary btn-block">登录</button>
+					<a class="extra" href="reg.html">注册</a><a class="extra" href="">找回密码？</a><a class="extra" href="index.html">回到首页</a>
+				</form>
+			</div>
+		</div>
+
+	</body>
 </html>

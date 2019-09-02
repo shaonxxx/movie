@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>详情页</title>
@@ -23,30 +23,30 @@
 <body>
 
 <embed style="width: 100% ;height: 25px;" type="text/html" src="header.html"/>
-<div id="app">
+<div >
     <div class="back">
         <div class="back-msg">
             <div class="back-imgs">
                 <a class="movie-post" href="http://www.saaee.com/movie/201186.html"
                    style="display:block;position:relative;">
                     <img class="img-thumbnail" alt="28岁未成年"
-                         src="http://ww2.sinaimg.cn/mw690/006xTuHMgw1fbdk0yamdrj30bw0gogpv.jpg" style="width: 300px;">
+                         th:src="${film.getCovers()}" style="width: 300px;">
                 </a>
             </div>
             <div class="back-year">
                 <h1>
-                    {{film.filmName}}
+                    [[${film.filmName}]]
                     <!--<span class="year">(2016)</span>-->
                 </h1>
             </div>
             <div class="back-dilates">
                 <span>类型：</span>
-                <a href="#" style="font-size: 14px;">{{film.categoryString}}</a>
+                <a href="#" style="font-size: 14px;">[[${film.categoryString}]]</a>
             </div>
             <div class="back-class">
-                <a href="#">{{film.language}}</a>
+                <a href="#">[[${film.language}]]</a>
                 &nbsp;
-                &nbsp;/{{film.releseDate}}
+                &nbsp;/[[${film.releseDate}]]
             </div>
             <div class="back-buy">
                 <button class="uk-button-large uk-button-primary" type="button">点击购票</button>
@@ -54,7 +54,7 @@
             </div>
             <div class="back-mix">
                 <span style="font-weight: 800;">用户评分</span><br>
-                <span style="font-size: 30px;color: yellow">{{film.grage}}</span>
+                <span style="font-size: 30px;color: yellow">[[${film.grage}]]</span>
                 <div>
                     <img src="images/xinxin.png" style="width: 30px;height: 30px;">
                     <img src="images/xinxin.png" style="width: 30px;height: 30px;">
@@ -90,32 +90,65 @@
                 <li>
                     <div style="margin-top:5px;width:740px;">
                         <div class="col-xs-12 movie-introduce">
-                            <h1>{{film.filmName}}</h1>
-                            <p>
-                                {{film.info}}
-                            </p>
+                            <h2>导演:&nbsp;&nbsp;[[${film.filmName}]]</h2>
+                            <h2>主要演员:&nbsp;&nbsp;[[${film.info}]]</h2>
 
                         </div>
                     </div>
                 </li>
                 <li>
-                    {{film.stars}}
+                    [[${film.stars}]]
                     <br>
-                    {{film.otherStats}}
+                    [[${film.otherStats}]]
                 </li>
             </ul>
         </div>
         <div class="recommend">
+            <div style="width: 500px;height: 500px;border: 2px red solid;" id="vm">
+                <table class="">
+                    <thead>
+                    <tr>
+                        <th>放映时间</th>
+                        <th>语言版本</th>
+                        <th>放映厅</th>
+                        <th>售价（元）</th>
+                        <th>选座购票</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <!-- 排片信息展示 -->
+                    <tr class="" v-for="(item,index) in ss">
+                        <td>
+                            <span class="">{{item.startTime}}开始</span>
+                            <br />
+                            <span class="">{{item.endTime}}散场</span>
+                        </td>
+                        <td>
+                            <span class="">{{item.film.language}}</span>
+                        </td>
+                        <td>
+                            <span class="">{{item.hall.hallName}}</span>
+                        </td>
+                        <td>
+                            <span class=""><span class="stonefont">{{item.price}}</span></span>
+                        </td>
+                        <td>
+                            <a href="#" class="" >选座购票</a>
+                        </td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
             <div>
                 <h2>精彩推荐</h2>
             </div>
-            <div class="tuijian">
-                <div class="" v-for="filmrandom in filmRandom">
+            <div class="tuijian" th:each="filmrandom:${recommends}">
+                <div class="">
                     <a target="_blank" title="#" href="#">
                         <img alt="" src="images/sudu1.jpg@106w_145h_1e_1c" width="100%">
                     </a>
                     <a target="_blank" title="#" href="#">
-                        <h4>{{filmrandom.filmName}}<br><i>{{filmrandom.grage}}分</i></h4>
+                        <h4>[[${filmrandom.filmName}]]<br><i>[[${filmrandom.grage}]]分</i></h4>
                     </a>
                 </div>
             </div>
@@ -127,33 +160,16 @@
                     <a class="uk-button" href="#" onclick="openBlank()" data-uk-modal="{target:'#modal-blank',bgclose:false}">点击评论</a>
                 </div>
             </div>
-            <div class="comment-text">
-                <div class="comment-user">
+            <div class="comment-text" id="app">
+                <div class="comment-user" v-for="comment in showComment">
                     <div class="comment-text-img">
                         <img src="images/1st-big-item.jpg">
                     </div>
                     <div class="comment-text-bag">
-                        <div><h3>名称</h3></div>
-                        <div><h6>评分星星</h6></div>
-                        <div style="width: 600px;"><p>评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体
-                            评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体
-                            评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体
-                        </p>
-                        </div>
-                        <hr style="width: 600px;"/>
-                    </div>
-                </div>
-                <div>
-                    <div class="comment-text-img">
-                        <img src="images/1st-big-item.jpg">
-                    </div>
-                    <div class="comment-text-bag">
-                        <div><h3>名称</h3></div>
-                        <div><h6>评分星星</h6></div>
-                        <div style="width: 600px;"><p>评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体
-                            评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体
-                            评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体评论主体
-                        </p>
+                        <div><h3>{{comment.nickName}}</h3></div>
+                        <div><h6>{{comment.score}}</h6></div>
+                        <div v-html="comment.content" style="width: 600px;">
+
                         </div>
                         <hr style="width: 600px;"/>
                     </div>
@@ -192,7 +208,89 @@
 </div>
 </body>
 <script>
+    var apps = new Vue({
+        el: "#app",
+        data: {
+            showComment:[],
+        },
+    })
+    var vm = new Vue({
+        el: "#vm",
+        data: {
+            ss: []
+        }
+    })
+
+    var modal = UIkit.modal("#modal-blank");
+    var context;
+    var nickName="zs";
     var score=0;
+    var filmId=2;
+    // var sss=[[${film.filmId}]];
+    //加载富文本编辑器
+    var E = window.wangEditor;
+    var editor = new E('#editor');
+    editor.create();
+
+    $(function () {
+        alert(2222);
+        //加载评论主体
+        axios({
+            url: "http://localhost:8081/filmComment",
+            method: "get",
+            params: {
+                filmId: filmId,
+                currentPage:"",
+                pageSize:4
+            }
+        }).then(function (res) {
+            this.apps.showComment = res.data.data.list;
+        });
+        //加载排片信息
+        axios({
+            url: "http://localhost:8081/screening/film/" + 2,
+            method: "get",
+        }).then(function(res){
+            alert(1);
+            console.log(res);
+            this.vm.ss=res.data.data;
+            for(var i=0;i<this.vm.ss.length;i++){
+                this.vm.ss[i].startTime=this.vm.ss[i].startTime.substring(this.vm.ss[i].startTime.indexOf(" "));
+                this.vm.ss[i].endTime=this.vm.ss[i].endTime.substring(this.vm.ss[i].endTime.indexOf(" "));
+            }
+        })
+
+
+    });
+
+    // 提交评论内容
+    function commitText(){
+        context= editor.txt.html();
+        axios({
+            url: "http://localhost:8081/filmComment",
+            method: "post",
+            params: {
+                filmId:filmId,
+                content:context,
+                commentTime:new Date(),
+                nickName:nickName,
+                commentStatus:1,
+                score:score
+            }
+        }).then(function (res) {
+            if(res.data.code==200){
+                UIkit.notify("<i class='uk-icon-check'></i> 评论成功");
+                modal.hide();
+                editor.txt.html("");
+            }else{
+                UIkit.notify("<i class='uk-icon-check'></i> 评论失败");
+            }
+        });
+
+    }
+
+
+    //星星切换
     function changeStar(i) {
         score=i*2;
         $("[name='star']").attr('src','images/xinxin.png');
@@ -207,91 +305,20 @@
         //$("#star2").attr('src','images/xinxin.png');
     }
 
-    var apps = new Vue({
-        el: "#app",
-        data: {
-            film: {},
-            filmRandom: []
-        }
-    })
-
-    //加载富文本编辑器
-    var E = window.wangEditor;
-    var editor = new E('#editor');
-    var modal = UIkit.modal("#modal-blank");
-    editor.create();
 
     //打开评论窗口
     function openBlank() {
-            modal.show();
+       modal.show();
     }
     //关闭评论窗口
     function closeBlank() {
         modal.hide();
     }
 
-    // 提交评论内容
-    function commitText(){
-       var context= editor.txt.html();
-       var filmId=this.apps.film.filmId;
-       var nickName="zs";
-        axios({
-            url: "http://localhost:8081/filmComment",
-            method: "post",
-            params: {
-                filmId:filmId,
-                content:context,
-                commentTime:new Date(),
-                nickName:nickName,
-                commentStatus:1,
-                score:score
-            }
-        }).then(function (res) {
-            alert(res.data.code)
-           if(res.data.code==200){
-               UIkit.notify("<i class='uk-icon-check'></i> 评论成功");
-               modal.hide();
-               editor.txt.html("");
-           }else{
-               UIkit.notify("<i class='uk-icon-check'></i> 评论失败");
-           }
-        });
-
-    }
 
 
 
-
-    $(function () {
-
-
-
-        var param = resJson();
-        param = JSON.parse(param);
-        axios({
-            url: "http://localhost:8081/film",
-            method: "get",
-            params: param
-        }).then(function (res) {
-            this.apps.film = res.data.data;
-        });
-
-        axios({
-            url: "http://localhost:8081/film/getRandom",
-            method: "get",
-            params: {
-                num: 9
-            }
-        }).then(function (res) {
-            this.apps.filmRandom = res.data.data;
-        })
-
-
-
-    });
-
-
-    function resJson(url,) {
+   /* function resJson(url) {
         var url = window.location.search;
         var oltid = url.substr(url.indexOf("?") + 1);
         oltid = oltid.split('&');
@@ -303,15 +330,7 @@
         json = json.substr(0, json.length - 1);
         json += "}"
         return json;
-    }
-
-
-    function comments() {
-        UIkit.modal.prompt('Name:', '123', function (val) {
-
-            UIkit.modal.alert('Hello ' + (val || 'Mr noname') + '!');
-        });
-    }
+    }*/
 </script>
 
 </html>

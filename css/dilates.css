@@ -18,7 +18,7 @@
 .tuijian div a{width:100%;height:5px;text-align: center}
 .comment{float:left;width: 740px;height: 500px;}
 .comment-handle{width: 740px;height: 30px;}
-.comment-text{width: 740px;height: 500px;}
+.comment-text{width: 740px;height: 500px;overflow-y:auto; overflow-x:auto; width:740px; height: 500px;}
 .comment-text-img{float:left; width: 70px;height:70px; border-radius:100%;overflow: hidden;margin-left: 20px;margin-top: 15px;}
 .comment-text-img img{width: 70px;height:70px;}
 .comment-text-bag{float:left; width: 500px;height: 100px;margin-left: 15px;margin-top: 20px;}
